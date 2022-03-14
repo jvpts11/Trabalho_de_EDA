@@ -20,4 +20,5 @@
 //Método main, alterado para dar mais legibilidade
 void t_main() {
 	printf("Hello World");
+	printf("Testando o github");
 }
