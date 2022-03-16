@@ -11,14 +11,20 @@
 //Bibliotecas nativas de C
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 //Interfaces
 #include "IStructs.h"
 
 #define t_main main
 
+bool programaCorrendo;
+
 //Método main, alterado para dar mais legibilidade
-void t_main() {
-	printf("Hello World");
-	printf("Testando o github");
+int t_main() {
+	do {
+
+	} while (programaCorrendo == true);
+
+	return 0;
 }
