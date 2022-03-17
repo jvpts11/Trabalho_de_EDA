@@ -10,7 +10,7 @@
 #include <stdlib.h>
 
 FILE* dadosGravados;
-FILE* openDadosGravados;
+char d[30] = "Dados_Gravados.txt";
 
 void lerFicheiro() {
 
@@ -21,5 +21,6 @@ void gravarEmFicheiro() {
 }
 
 void carregarNaMemoria() {
-
+	dadosGravados = fopen(d,"r");
+	fclose(dadosGravados);
 }
