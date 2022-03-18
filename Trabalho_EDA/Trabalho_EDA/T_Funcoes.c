@@ -12,16 +12,19 @@
 #include <math.h>
 #include <stdbool.h>
 
+//Retorna a quantidade máxima de tempo em segundos
 double detQTD_Max_de_Tempo(int unidades_de_tempo[]) {
 
 	return 0;
 }
 
+//Retorna a quantidade máxima de tempo em segundos
 double detQTD_Min_de_Tempo(int unidades_de_tempo[]) {
 
 	return 0;
 }
 
+//Retorna a quantidade média de tempo em segundos
 double detQTD_Med_de_Tempo(int unidades_de_tempo[]) {
 	return 0;
 }

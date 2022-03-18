@@ -10,7 +10,19 @@
 #include <stdio.h>
 #include <memory.h>
 
+//Método apenas para debugging e acesso a outros métodos
 void t_debug_print() {
-	printf("Debugging");
-	
+	printf("printf aqui fodase kkkk");
+}
+
+int t_debug_dividir(int a, int b) {
+	int c;
+
+	if (b > 0) {
+		c = a / b;
+		return c;
+	}
+	else {
+		return("Retornei string kkkk");
+	}
 }

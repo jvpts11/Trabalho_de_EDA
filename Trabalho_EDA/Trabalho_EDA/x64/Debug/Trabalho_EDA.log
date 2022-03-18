@@ -1,2 +1,5 @@
-﻿  T_Main.c
+﻿  T_Debug.c
+  T_Main.c
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(23,15): warning C4013: 't_debug_print' undefined; assuming extern returning int
+  Generating Code...
   Trabalho_EDA.vcxproj -> C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Trabalho_EDA.exe
