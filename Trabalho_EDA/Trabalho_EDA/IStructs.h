@@ -6,17 +6,17 @@
 
 #ifndef N
 
-#define N 40
+#define N 7
 
 #pragma region Estruturas
 //Struct para definir os jobs
-typedef struct Jobs { 
+typedef struct Operations { 
 
 	char id[N];
 	int operations[N];
 	struct Jobs* next;
 
-}Jobs;
+}Operations;
 
 #pragma endregion
 #endif // !N

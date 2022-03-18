@@ -10,7 +10,7 @@
 #include <stdlib.h>
 
 FILE* dadosGravados;
-char d[30] = "Dados_Gravados.txt";
+const char d[30] = "Dados_Gravados.txt";
 
 void lerFicheiro() {
 
