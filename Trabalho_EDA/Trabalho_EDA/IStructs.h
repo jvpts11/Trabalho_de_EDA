@@ -12,7 +12,7 @@
 //Struct para definir os jobs
 typedef struct Operations { 
 
-	char id[N];
+	int id[N];
 	int operations[N];
 	struct Jobs* next;
 

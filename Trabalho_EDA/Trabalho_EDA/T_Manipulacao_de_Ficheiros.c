@@ -11,9 +11,12 @@
 
 FILE* dadosGravados;
 const char d[30] = "Dados_Gravados.txt";
+int a, b; //Variáveis para receberem dados carregados dos ficheiros
 
 void lerFicheiro() {
-
+	dadosGravados = fopen(d,"r");
+	fscanf(dadosGravados,"%d,%d",&a,&b); //Exemplo de como devem ser carregados os dados na memória
+	fclose(dadosGravados);
 }
 
 void gravarEmFicheiro() {
