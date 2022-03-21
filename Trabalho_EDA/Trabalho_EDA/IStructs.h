@@ -9,14 +9,15 @@
 #define N 7
 
 #pragma region Estruturas
-//Struct para definir os jobs
-typedef struct Operations { 
+//Struct para definir as máquinas que constituem os jobs
+typedef struct Machines { 
 
-	int id[N];
-	int operations[N];
-	struct Jobs* next;
+	int id;
+	int operation_number;
+	double time_of_production;
+	struct Machines* next;
 
-}Operations;
+}Machines;
 
 #pragma endregion
 #endif // !N

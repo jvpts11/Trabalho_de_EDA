@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "IStructs.h"
+
 FILE* dadosGravados;
 const char d[30] = "Dados_Gravados.txt";
 int a, b; //Variáveis para receberem dados carregados dos ficheiros
