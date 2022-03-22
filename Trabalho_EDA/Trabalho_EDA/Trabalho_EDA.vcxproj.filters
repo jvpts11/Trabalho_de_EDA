@@ -21,9 +21,6 @@
     <ClCompile Include="T_Metodos.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="T_Manipulacao_de_Ficheiros.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="T_Funcoes.c">
       <Filter>Source Files</Filter>
     </ClCompile>

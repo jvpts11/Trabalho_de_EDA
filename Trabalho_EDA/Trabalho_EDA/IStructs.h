@@ -10,14 +10,18 @@
 
 #pragma region Estruturas
 //Struct para definir as máquinas que constituem os jobs
-typedef struct Machines { 
+struct Machines { 
 
 	int id;
-	int operation_number;
-	double time_of_production;
+	unsigned short tempoDeProducao;
 	struct Machines* next;
 
-}Machines;
+};
+
+struct Operations {
+	int number;
+	struct Machines* next;
+};
 
 #pragma endregion
 #endif // !N
