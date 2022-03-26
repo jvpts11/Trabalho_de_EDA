@@ -6,14 +6,14 @@
 
 #ifndef N
 
-#define N 7
+#define N 20
 
 #pragma region Estruturas
 //Struct para definir as máquinas que constituem os jobs
 struct Machines { 
 
 	int id;
-	unsigned short tempoDeProducao;
+	short tempoDeProducao;
 	struct Machines* next;
 
 };
