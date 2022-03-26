@@ -13,14 +13,12 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-//Funcoes e métodos
-//olaaaa
+//Ãlteração do método Main
 #define t_main main
 
 //Método main, alterado para dar mais legibilidade
 int t_main() {
-
-	printf("Fodase");
+	iniciarLista();
 
 	return 0;
 }

@@ -4,9 +4,6 @@
 * Data:14/03/2022
 */
 
-#ifndef N
-
-#define N 20
 
 #pragma region Estruturas
 //Struct para definir as máquinas que constituem os jobs
@@ -23,5 +20,14 @@ struct Operations {
 	struct Machines* next;
 };
 
+typedef struct Machines m_t;
+
 #pragma endregion
-#endif // !N
+
+#pragma region Metodos
+
+m_t* criarNovoBloco(int arg1, short arg2);
+m_t* criarNovaHead(m_t** h, m_t* bloco_para_ser_inserido);
+
+
+#pragma endregion

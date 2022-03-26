@@ -25,7 +25,7 @@
     <ClCompile Include="T_Metodos.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IStructs.h" />
+    <ClInclude Include="IDados.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
