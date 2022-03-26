@@ -44,11 +44,14 @@ void imprimirLista(m_t* head) {
 	printf("\n");
 }
 
+// Método que inicia as listas, ele recebe
 void iniciarLista() {
 	m_t* next = NULL;
 	m_t* temp;
 
-	for (int i = 0; i < 25; i++) {
+	int numeroDeMaquinas = lerNumeroDeMaquinas();
+
+	for (int i = 0; i < numeroDeMaquinas; i++) {
 		temp = criarNovoBloco(i,i);
 		criarNovaHead(&next, temp);
 	}
@@ -56,11 +59,29 @@ void iniciarLista() {
 	imprimirLista(next);
 }
 
-// Método para ler o ficheiro e carregar os dados na memória
-void lerFicheiro() {
+//Função que retorna o número de máquinas em um arquivo com base no múmero de linhas no arquivo
+int lerNumeroDeMaquinas() {
+	int numeroDeMaquinas = 0;
+	if (dadosGravados == NULL) return NULL;
 	dadosGravados = fopen(d,"r");
-	fscanf(dadosGravados,"%d,%d",&a,&b); //Exemplo de como devem ser carregados os dados na memória
+	while (!feof(dadosGravados)) {
+		numeroDeMaquinas++;
+		if (dadosGravados == EOF) {
+			break;
+		}
+	}
 	fclose(dadosGravados);
+	return numeroDeMaquinas;
+}
+
+// Método para ler o ficheiro e carregar os dados na memória
+bool lerFicheiro() {
+	if (dadosGravados == NULL) return false;
+	dadosGravados = fopen(d,"r");
+	fscanf(dadosGravados,"%d,%d\n",&a,&b); //Exemplo de como devem ser carregados os dados na memória
+	fclose(dadosGravados);
+
+	return true;
 }
 
 // Método para receber os dados das listas e gravar os dados em um ficheiro de texto
