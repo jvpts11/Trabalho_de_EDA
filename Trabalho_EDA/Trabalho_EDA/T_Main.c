@@ -20,7 +20,7 @@
 //Método main, alterado para dar mais legibilidade
 int t_main() {
 
-	
+	printf("Fodase");
 
 	return 0;
 }
