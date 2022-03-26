@@ -14,7 +14,7 @@
 #include <stdbool.h>
 
 //Funcoes e métodos
-
+//olaaaa
 #define t_main main
 
 //Método main, alterado para dar mais legibilidade
