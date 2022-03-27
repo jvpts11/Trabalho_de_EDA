@@ -15,14 +15,14 @@
 
 FILE* dadosGravados;
 const char d[30] = "Dados_Gravados.txt";
-int a = 10, b = 20; //Variáveis para receberem dados carregados dos ficheiros
+int a = 10, b = 20; //Variáveis para testar leitura e escrita de ficheiros
 
 #pragma region Manipulacao_de_Listas
 // Função para criar novo bloco na lista, recebe dois argumentos: o id e o tempo de produção, que é um short.
-m_t* criarNovoBloco(int arg1,short arg2) {
+m_t* criarNovoBloco(int machineId,short tempoDeProd) {
 	m_t* blocoNovo = malloc(sizeof(m_t));
-	blocoNovo->id = arg1;
-	blocoNovo->tempoDeProducao = arg2;
+	blocoNovo->id = machineId;
+	blocoNovo->tempoDeProducao = tempoDeProd;
 	blocoNovo->next;
 	return blocoNovo;
 }
@@ -83,15 +83,19 @@ int lerNumeroDeMaquinas() {
 
 #pragma endregion
 
-
-
 #pragma region Leitura_E_Escrita_De_Ficheiros
 // Método para ler o ficheiro e carregar os dados na memória
-bool lerFicheiro() {
+bool lerFicheiro(m_t*h) {
+	m_t* aux = h;
 	if (dadosGravados == NULL) return false;
 	
+	int nMaquinas = lerNumeroDeMaquinas();
 	dadosGravados = fopen(d,"r");
-	fscanf(dadosGravados,"%d,%d\n",&a,&b); //Exemplo de como devem ser carregados os dados na memória
+
+	while (aux != NULL) {
+		fscanf(dadosGravados, "%d,%d\n", aux->id, aux->tempoDeProducao);
+		h = h->next;
+	}
 	fclose(dadosGravados);
 
 	return true;
@@ -103,15 +107,10 @@ bool gravarEmFicheiro(m_t* h) {
 
 	if (h == NULL) return false;
 
-	int nMaquinas = lerNumeroDeMaquinas();
 	dadosGravados = fopen(d,"w");
-
-	
 	while (aux !=NULL) {
-		fprintf(dadosGravados,"%d,%d",aux->id,aux->next);
-		if (aux == NULL) {
-			break;
-		}
+		fprintf(dadosGravados,"%d,%d",aux->id,aux->tempoDeProducao);
+		h = h->next;
 	}
 	fclose(dadosGravados);
 

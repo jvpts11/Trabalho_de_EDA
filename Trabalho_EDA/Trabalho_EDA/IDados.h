@@ -18,6 +18,7 @@ struct Machines {
 struct Operations {
 	int number;
 	struct Machines* next;
+	struct Operations* next;
 };
 
 typedef struct Machines m_t;
