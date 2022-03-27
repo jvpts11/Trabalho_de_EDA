@@ -15,8 +15,9 @@
 
 FILE* dadosGravados;
 const char d[30] = "Dados_Gravados.txt";
-int a, b; //Variáveis para receberem dados carregados dos ficheiros
+int a = 10, b = 20; //Variáveis para receberem dados carregados dos ficheiros
 
+#pragma region Manipulacao_de_Listas
 // Função para criar novo bloco na lista, recebe dois argumentos: o id e o tempo de produção, que é um short.
 m_t* criarNovoBloco(int arg1,short arg2) {
 	m_t* blocoNovo = malloc(sizeof(m_t));
@@ -32,7 +33,11 @@ m_t* criarNovaHead(m_t **h,m_t *bloco_para_ser_inserido) {
 	return bloco_para_ser_inserido;
 }
 
-void imprimirLista(m_t* head) {
+#pragma endregion
+
+#pragma region Listas_a_Partir_de_Ficheiros
+
+void imprimirListaAPartirDeFicheiros(m_t* head) {
 	m_t* temp = head;
 
 	while (temp != NULL) {
@@ -45,7 +50,7 @@ void imprimirLista(m_t* head) {
 }
 
 // Método que inicia as listas, ele recebe
-void iniciarLista() {
+void iniciarListaAPartirDeFicheiros() {
 	m_t* next = NULL;
 	m_t* temp;
 
@@ -56,8 +61,10 @@ void iniciarLista() {
 		criarNovaHead(&next, temp);
 	}
 
-	imprimirLista(next);
+	imprimirListaAPartirDeFicheiros(next);
 }
+
+
 
 //Função que retorna o número de máquinas em um arquivo com base no múmero de linhas no arquivo
 int lerNumeroDeMaquinas() {
@@ -74,9 +81,15 @@ int lerNumeroDeMaquinas() {
 	return numeroDeMaquinas;
 }
 
+#pragma endregion
+
+
+
+#pragma region Leitura_E_Escrita_De_Ficheiros
 // Método para ler o ficheiro e carregar os dados na memória
 bool lerFicheiro() {
 	if (dadosGravados == NULL) return false;
+	
 	dadosGravados = fopen(d,"r");
 	fscanf(dadosGravados,"%d,%d\n",&a,&b); //Exemplo de como devem ser carregados os dados na memória
 	fclose(dadosGravados);
@@ -85,9 +98,24 @@ bool lerFicheiro() {
 }
 
 // Método para receber os dados das listas e gravar os dados em um ficheiro de texto
-void gravarEmFicheiro() {
+bool gravarEmFicheiro(m_t* h) {
+	m_t* aux = h;
+
+	if (h == NULL) return false;
+
+	int nMaquinas = lerNumeroDeMaquinas();
 	dadosGravados = fopen(d,"w");
-	fprintf(dadosGravados,"%d,%d");
+
+	
+	while (aux !=NULL) {
+		fprintf(dadosGravados,"%d,%d",aux->id,aux->next);
+		if (aux == NULL) {
+			break;
+		}
+	}
 	fclose(dadosGravados);
+
+	return true;
 }
 
+#pragma endregion

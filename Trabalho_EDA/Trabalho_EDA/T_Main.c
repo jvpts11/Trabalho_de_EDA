@@ -18,7 +18,6 @@
 
 //Método main, alterado para dar mais legibilidade
 int t_main() {
-	iniciarLista();
 
 	return 0;
 }

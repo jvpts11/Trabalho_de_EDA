@@ -1,3 +1,12 @@
-﻿  T_Main.c
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(21,14): warning C4013: 'iniciarLista' undefined; assuming extern returning int
+﻿  T_Interface.c
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Interface.c(44,8): warning C4022: 'free': pointer mismatch for actual parameter 1
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Interface.c(23,7): warning C4102: 'case1': unreferenced label
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Interface.c(27,7): warning C4102: 'case2': unreferenced label
+  T_Main.c
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(21,18): warning C4013: 'gravarEmFicheiro' undefined; assuming extern returning int
+  T_Metodos.c
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Metodos.c(57,44): warning C4013: 'lerNumeroDeMaquinas' undefined; assuming extern returning int
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Metodos.c(72,40): warning C4047: 'return': 'int' differs in levels of indirection from 'void *'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Metodos.c(76,27): warning C4047: '==': 'FILE *' differs in levels of indirection from 'int'
+  Generating Code...
   Trabalho_EDA.vcxproj -> C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Trabalho_EDA.exe
