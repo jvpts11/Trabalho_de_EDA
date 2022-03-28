@@ -13,12 +13,16 @@ typedef struct Jobs
 	struct Jobs* next;
 }job;
 
-typedef struct Machines 
+typedef struct Jobs j;
+
+struct Machines 
 { 
 	int id;
 	short tempoDeProducao;
 	struct Machines* next;
-}m_t;
+};
+
+typedef struct Machines m_t;
 
 typedef struct Operations 
 {
@@ -26,6 +30,8 @@ typedef struct Operations
 	struct Machines* next;
 	struct Operations* nextt;
 }opera;
+
+typedef struct Operations o;
 
 
 #pragma endregion
