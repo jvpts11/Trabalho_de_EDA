@@ -11,6 +11,18 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
+#include "IDados.h"
+
+//Função que cria job
+job* CriaJob(int n)
+{
+	job* njob;
+	njob->numero = n;
+	njob->next = NULL;
+	return njob;
+}
+
+
 
 //Retorna a quantidade máxima de tempo em segundos
 double detQTD_Max_de_Tempo(int unidades_de_tempo[]) {
