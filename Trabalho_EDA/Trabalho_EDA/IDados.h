@@ -7,31 +7,32 @@
 
 #pragma region Estruturas
 //Struct para definir as máquinas que constituem os jobs
-typedef struct Jobs
+struct Jobs
 {
 	int numero;
-	struct job* next;
-}job;
+	struct Jobs* next;
+};
 
+typedef struct Jobs j;
 
-
-typedef struct Machines 
+struct Machines 
 { 
-	operation* num;
-
 	int id;
 	short tempoDeProducao;
 	struct Machines* next;
+};
 
-}m_t;
+typedef struct Machines m_t;
 
 typedef struct Operations 
 {
 	int job;
 	int number;
 	struct Machines* next;
-	struct Operations* next;
-}operation;
+	struct Operations* nextt;
+};
+
+typedef struct Operations o;
 
 
 #pragma endregion
@@ -40,7 +41,9 @@ typedef struct Operations
 
 m_t* criarNovoBloco(int arg1, short arg2);
 m_t* criarNovaHead(m_t** h, m_t* bloco_para_ser_inserido);
-job* CriaJob(int n);
+j* CriaJob(int n);
+o* CriaOperacao(int job, int id);
+void ListaOperaçaoUltimo(o** h, o* novo);
 
 
 #pragma endregion

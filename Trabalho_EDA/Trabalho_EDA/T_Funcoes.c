@@ -14,12 +14,35 @@
 #include "IDados.h"
 
 //Função que cria job
-job* CriaJob(int n)
+j* CriaJob(int n)
 {
-	job* njob;
-	njob->numero = n;
-	njob->next = NULL;
-	return njob;
+	j* novo = malloc(sizeof(j));
+	novo->numero = n;
+	novo->next = NULL;
+	return novo;
+}
+
+
+//Função que cria uma operação
+o* CriaOperacao(int job, int id)
+{
+	o* novo = malloc(sizeof(o));
+	novo->job = job;
+	novo->number = id;
+	novo->next = NULL;
+	novo->nextt = NULL;
+}
+
+void ListaOperaçaoUltimo(o** h, o* novo)
+{
+	o* aux = *h;
+	while (aux->nextt)
+	{
+		aux = aux->nextt;
+	}
+	novo = CriaOperacao(aux->job, aux->number + 1);
+	aux->nextt = novo;
+	*h = aux;
 }
 
 

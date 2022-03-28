@@ -20,11 +20,23 @@
 //Método main, alterado para dar mais legibilidade
 int t_main() 
 {
-	job job1;
-	job* p1;
-	p1 = &job1;
-
-	p1 = CriaJob(1);
-
+	o* otemp;
+	o* headop;
+	o o2;
+	o o3;
+	o* po2 = &o2;
+	o* po3 = &o3;
+	j* h;
+	h = CriaJob(1);
+	headop = CriaOperacao(1, 1);
+	ListaOperaçaoUltimo(&headop, po2);
+	ListaOperaçaoUltimo(&headop, po3);
+	otemp = headop;
+	printf("%d", h->numero);
+	while (otemp)
+	{
+		printf("%d", otemp->number);
+		otemp = otemp->nextt;
+	}
 	return 0;
 }
