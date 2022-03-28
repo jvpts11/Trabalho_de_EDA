@@ -88,14 +88,13 @@ int lerNumeroDeMaquinas() {
 bool lerFicheiro(m_t*h) {
 	m_t* aux = h;
 	if (dadosGravados == NULL) return false;
-	if (aux == NULL) return false;
-
+	
 	int nMaquinas = lerNumeroDeMaquinas();
 	dadosGravados = fopen(d,"r");
 
-	while (aux != NULL || aux->id < nMaquinas) {
+	while (aux != NULL) {
 		fscanf(dadosGravados, "%d,%d\n", aux->id, aux->tempoDeProducao);
-		aux = aux->next;
+		h = h->next;
 	}
 	fclose(dadosGravados);
 
@@ -106,16 +105,16 @@ bool lerFicheiro(m_t*h) {
 bool gravarEmFicheiro(m_t* h) {
 	m_t* aux = h;
 
-	if (aux == NULL) return false; //Verificação se existe alguma lista
+	if (h == NULL) return false;
 
-	dadosGravados = fopen(d,"w"); //Abertura do arquivo
+	dadosGravados = fopen(d,"w");
 	while (aux !=NULL) {
-		fprintf(dadosGravados,"%d,%d\n",aux->id,aux->tempoDeProducao); //Impressão dos dados no arquivo
-		aux = aux->next; //Aponta para o próximo bloco na lista
+		fprintf(dadosGravados,"%d,%d",aux->id,aux->tempoDeProducao);
+		h = h->next;
 	}
-	fclose(dadosGravados); // fecha o arquivo
+	fclose(dadosGravados);
 
-	return true; //Retorna true caso a gravação do arquivo foi feita direito
+	return true;
 }
 
 #pragma endregion
