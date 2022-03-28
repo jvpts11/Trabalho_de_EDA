@@ -69,18 +69,15 @@ void iniciarListaAPartirDeFicheiros() {
 //Função que retorna o número de máquinas em um arquivo com base no múmero de linhas no arquivo
 int lerNumeroDeMaquinas() {
 	int numeroDeMaquinas = 0;
-	int ch = 0;
-
-	dadosGravados = fopen(d, "r");
-
-	do {
-		ch = fgetc(dadosGravados);
-		if (ch == '\n')
-			numeroDeMaquinas++;
-	} while (ch != EOF);
-
+	if (dadosGravados == NULL) return NULL;
+	dadosGravados = fopen(d,"r");
+	while (!feof(dadosGravados)) {
+		numeroDeMaquinas++;
+		if (dadosGravados == EOF) {
+			break;
+		}
+	}
 	fclose(dadosGravados);
-
 	return numeroDeMaquinas;
 }
 
