@@ -33,16 +33,15 @@ o* CriaOperacao(int job, int id)
 	novo->nextt = NULL;
 }
 
-void ListaOperaçaoUltimo(o** h, o* novo)
+void NovaOperacao(o** h, int no)
 {
-	o* aux = *h;
-	while (aux->nextt)
+	o* otemp;
+	for (size_t i = no; i > 0; i--)
 	{
-		aux = aux->nextt;
+		otemp = CriaOperacao(1, i);
+		otemp->nextt = *h;
+		*h = otemp;
 	}
-	novo = CriaOperacao(aux->job, aux->number + 1);
-	aux->nextt = novo;
-	*h = aux;
 }
 
 

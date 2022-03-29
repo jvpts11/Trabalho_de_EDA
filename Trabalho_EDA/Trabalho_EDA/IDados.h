@@ -24,7 +24,7 @@ struct Machines
 
 typedef struct Machines m_t;
 
-typedef struct Operations 
+struct Operations 
 {
 	int job;
 	int number;
@@ -43,7 +43,7 @@ m_t* criarNovoBloco(int arg1, short arg2);
 m_t* criarNovaHead(m_t** h, m_t* bloco_para_ser_inserido);
 j* CriaJob(int n);
 o* CriaOperacao(int job, int id);
-void ListaOperaçaoUltimo(o** h, o* novo);
+void NovaOperacao(o** h, int no);
 
 
 #pragma endregion
