@@ -44,6 +44,8 @@ m_t* criarNovaHead(m_t** h, m_t* bloco_para_ser_inserido);
 j* CriaJob(int n);
 o* CriaOperacao(int job, int id);
 void NovaOperacao(o** h, int no);
+void RemoveOperacao(o** h, int id);
+void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f);
 
 
 #pragma endregion
