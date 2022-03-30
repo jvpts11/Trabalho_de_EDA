@@ -33,11 +33,7 @@ m_t* criarNovaHead(m_t **h,m_t *bloco_para_ser_inserido) {
 	return bloco_para_ser_inserido;
 }
 
-#pragma endregion
-
-#pragma region Listas_a_Partir_de_Ficheiros
-
-void imprimirListaAPartirDeFicheiros(m_t* head) {
+void imprimirLista(m_t* head) {
 	m_t* temp = head;
 
 	while (temp != NULL) {
@@ -49,56 +45,47 @@ void imprimirListaAPartirDeFicheiros(m_t* head) {
 	printf("\n");
 }
 
-// Método que inicia as listas, ele recebe
-void iniciarListaAPartirDeFicheiros() {
+#pragma endregion
+
+#pragma region Manipulacao_de_Ficheiros
+// Método que inicia as listas, ele abre o ficheiro, em seguida recebe um inteiro de uma função, por fim retorna uma lista
+m_t* iniciarListaAPartirDeFicheiros() {
 	m_t* next = NULL;
-	m_t* temp;
+	m_t* temp = NULL;
+
+	dadosGravados = fopen(d, "r");
+	int id = 0;
+	short tempoDeProd = 0;
 
 	int numeroDeMaquinas = lerNumeroDeMaquinas();
 
 	for (int i = 0; i < numeroDeMaquinas; i++) {
+		fscanf(dadosGravados, "%d,%d", &id,&tempoDeProd);
 		temp = criarNovoBloco(i,i);
 		criarNovaHead(&next, temp);
 	}
 
-	imprimirListaAPartirDeFicheiros(next);
+	fclose(dadosGravados);
+
+	return temp;
 }
-
-
 
 //Função que retorna o número de máquinas em um arquivo com base no múmero de linhas no arquivo
 int lerNumeroDeMaquinas() {
 	int numeroDeMaquinas = 0;
-	if (dadosGravados == NULL) return NULL;
-	dadosGravados = fopen(d,"r");
-	while (!feof(dadosGravados)) {
-		numeroDeMaquinas++;
-		if (dadosGravados == EOF) {
-			break;
-		}
-	}
+	int ch = 0;
+
+	dadosGravados = fopen(d, "r");
+
+	do {
+		ch = fgetc(dadosGravados);
+		if (ch == '\n')
+			numeroDeMaquinas++;
+	} while (ch != EOF);
+
 	fclose(dadosGravados);
+
 	return numeroDeMaquinas;
-}
-
-#pragma endregion
-
-#pragma region Leitura_E_Escrita_De_Ficheiros
-// Método para ler o ficheiro e carregar os dados na memória
-bool lerFicheiro(m_t*h) {
-	m_t* aux = h;
-	if (dadosGravados == NULL) return false;
-	
-	int nMaquinas = lerNumeroDeMaquinas();
-	dadosGravados = fopen(d,"r");
-
-	while (aux != NULL) {
-		fscanf(dadosGravados, "%d,%d\n", aux->id, aux->tempoDeProducao);
-		h = h->next;
-	}
-	fclose(dadosGravados);
-
-	return true;
 }
 
 // Método para receber os dados das listas e gravar os dados em um ficheiro de texto

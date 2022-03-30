@@ -112,28 +112,37 @@ void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short 
 
 #pragma region Funções_de_Tempo
 //Retorna a quantidade máxima de tempo em segundos
-double detQTD_Max_de_Tempo(int unidades_de_tempo[]) {
+short detQTD_Max_de_Tempo(int unidades_de_tempo[]) {
 
 	return 0;
 }
 
 //Retorna a quantidade máxima de tempo em segundos
-double detQTD_Min_de_Tempo(int unidades_de_tempo[]) {
+short detQTD_Min_de_Tempo(int unidades_de_tempo[]) {
 
 	return 0;
 }
 
 //Retorna a quantidade média de tempo em segundos
-double detQTD_Med_de_Tempo(int unidades_de_tempo[]) {
+short detQTD_Med_de_Tempo(m_t*h) {
 
+	m_t* aux = h;
+	if (h == NULL) return NULL;
 
-	int media = 0;
+	short media = 0;
+	short unidades_de_tempo;
 
-	for (int i = 0; i < sizeof(unidades_de_tempo); i++) {
-		media += unidades_de_tempo[i];
+	int nmaquinas = 0;
+	while (aux!=NULL) {
+		nmaquinas++;
+		aux = aux->next;
 	}
 
-	double mediaFinal = media / sizeof(unidades_de_tempo);
+	for (int i = 0; i < nmaquinas; i++) {
+		media += unidades_de_tempo;
+	}
+
+	short mediaFinal = media / nmaquinas;
 
 	return mediaFinal;
 }
