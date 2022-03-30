@@ -1,9 +1,9 @@
-/**
-* Autor: João Tavares
+ï»¿/**
+* Autor: Joï¿½o Tavares
 * E-mail: a21871@alunos.ipca.pt
 * Data:16/03/2022
-* 
-* Descrição: Esse arquivo guarda as funções para realizar operações, listagens dentre outras coisas que
+*
+* Descriï¿½ï¿½o: Esse arquivo guarda as funï¿½ï¿½es para realizar operaï¿½ï¿½es, listagens dentre outras coisas que
 * precisem retornar dados.
 */
 
@@ -13,9 +13,8 @@
 #include <stdbool.h>
 #include "IDados.h"
 
-
-#pragma region Funções_Job_e_Operations
-//Função que cria job
+#pragma region Funï¿½ï¿½es_Job_e_Operations
+//Funï¿½ï¿½o que cria job
 j* CriaJob(int n)
 {
 	j* novo = malloc(sizeof(j));
@@ -25,7 +24,7 @@ j* CriaJob(int n)
 }
 
 
-//Função que cria uma operação
+//Funï¿½ï¿½o que cria uma operaï¿½ï¿½o
 o* CriaOperacao(int job, int id)
 {
 	o* novo = malloc(sizeof(o));
@@ -35,7 +34,7 @@ o* CriaOperacao(int job, int id)
 	novo->nextt = NULL;
 }
 
-//Função que procura uma operação
+//Funï¿½ï¿½o que procura uma operaï¿½ï¿½o
 o* ProcuraOperacao(o* h, int id)
 {
 	o* found = NULL;
@@ -51,7 +50,7 @@ o* ProcuraOperacao(o* h, int id)
 	return found;
 }
 
-//Função que cria as operações com o número que o utilizador quiser
+//Funï¿½ï¿½o que cria as operaï¿½ï¿½es com o nï¿½mero que o utilizador quiser
 void NovaOperacao(o** h, int no)
 {
 	o* otemp;
@@ -63,7 +62,7 @@ void NovaOperacao(o** h, int no)
 	}
 }
 
-//Função que remove a operação que o utilizador escolher
+//Funï¿½ï¿½o que remove a operaï¿½ï¿½o que o utilizador escolher
 void RemoveOperacao(o** h, int id)
 {
 	o* toRemove = ProcuraOperacao(*h, id);
@@ -86,22 +85,45 @@ void RemoveOperacao(o** h, int id)
 		AnttoRemove->nextt = DeptoRemove;
 	}
 }
+
+//Funï¿½ï¿½o que altera uma operaï¿½ï¿½o
+void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f)
+{
+	o* alterar = ProcuraOperacao(*h, id);
+
+	m_t* novo = criarNovoBloco(a, b);
+
+	alterar->next = novo;
+	m_t* novo2 = NULL;
+	if (c != 0 && d != 0)
+	{
+		m_t* novo2 = criarNovoBloco(c, d);
+		novo->next = novo2;
+	}
+	else if (e != 0 && f != 0)
+	{
+		novo2->next = criarNovoBloco(e, f);
+	}
+
+	*h = alterar;
+}
+
 #pragma endregion
 
-
-//Retorna a quantidade máxima de tempo em segundos
+#pragma region Funï¿½ï¿½es_de_Tempo
+//Retorna a quantidade mï¿½xima de tempo em segundos
 double detQTD_Max_de_Tempo(int unidades_de_tempo[]) {
 
 	return 0;
 }
 
-//Retorna a quantidade máxima de tempo em segundos
+//Retorna a quantidade mï¿½xima de tempo em segundos
 double detQTD_Min_de_Tempo(int unidades_de_tempo[]) {
 
 	return 0;
 }
 
-//Retorna a quantidade média de tempo em segundos
+//Retorna a quantidade mï¿½dia de tempo em segundos
 double detQTD_Med_de_Tempo(int unidades_de_tempo[]) {
 
 
@@ -115,3 +137,5 @@ double detQTD_Med_de_Tempo(int unidades_de_tempo[]) {
 
 	return mediaFinal;
 }
+
+#pragma endregion
