@@ -13,6 +13,8 @@
 #include <stdbool.h>
 #include "IDados.h"
 
+
+#pragma region Funções_Job_e_Operations
 //Função que cria job
 j* CriaJob(int n)
 {
@@ -33,6 +35,23 @@ o* CriaOperacao(int job, int id)
 	novo->nextt = NULL;
 }
 
+//Função que procura uma operação
+o* ProcuraOperacao(o* h, int id)
+{
+	o* found = NULL;
+	o* aux = h;
+	while (aux)
+	{
+		if (aux->number == id)
+		{
+			found = aux;
+		}
+		aux = aux->nextt;
+	}
+	return found;
+}
+
+//Função que cria as operações com o número que o utilizador quiser
 void NovaOperacao(o** h, int no)
 {
 	o* otemp;
@@ -44,6 +63,30 @@ void NovaOperacao(o** h, int no)
 	}
 }
 
+//Função que remove a operação que o utilizador escolher
+void RemoveOperacao(o** h, int id)
+{
+	o* toRemove = ProcuraOperacao(*h, id);
+	if (toRemove == *h)
+	{
+		o* DeptoRemove = ProcuraOperacao(*h, id + 1);
+		toRemove->nextt = NULL;
+		*h = DeptoRemove;
+	}
+	else if (toRemove->nextt == NULL)
+	{
+		o* AnttoRemove = ProcuraOperacao(*h, id - 1);
+		AnttoRemove->nextt = NULL;
+	}
+	else
+	{
+		o* AnttoRemove = ProcuraOperacao(*h, id - 1);
+		o* DeptoRemove = ProcuraOperacao(*h, id + 1);
+		toRemove->nextt = NULL;
+		AnttoRemove->nextt = DeptoRemove;
+	}
+}
+#pragma endregion
 
 
 //Retorna a quantidade máxima de tempo em segundos

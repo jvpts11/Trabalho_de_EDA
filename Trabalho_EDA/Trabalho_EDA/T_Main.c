@@ -24,6 +24,14 @@ int t_main()
 	o* otemp;
 	j* h;
 	h = CriaJob(1);
-	NovaOperacao(&headop, 69);
+	NovaOperacao(&headop, 8);
+	RemoveOperacao(&headop, 5);
+
+	o* aux = headop;
+	while (aux)
+	{
+		printf("%d\n", aux->number);
+		aux = aux->nextt;
+	}
 	return 0;
 }
