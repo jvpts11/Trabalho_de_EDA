@@ -1,11 +1,11 @@
-/**
-* Autor: João Tavares
+ï»¿/**
+* Autor: Joï¿½o Tavares
 * E-mail: a21871@alunos.ipca.pt
 * Data:14/03/2022
-* 
+*
 * Colocar outros contribuintes aqui abaixo:
-* 
-* 
+*
+*
 */
 
 //Bibliotecas nativas de C
@@ -14,11 +14,11 @@
 #include <stdbool.h>
 #include "IDados.h"
 
-//Ãlteração do método Main
+//ï¿½lteraï¿½ï¿½o do mï¿½todo Main
 #define t_main main
 
-//Método main, alterado para dar mais legibilidade
-int t_main() 
+//Mï¿½todo main, alterado para dar mais legibilidade
+int t_main()
 {
 	o* headop = NULL;
 	o* otemp;
