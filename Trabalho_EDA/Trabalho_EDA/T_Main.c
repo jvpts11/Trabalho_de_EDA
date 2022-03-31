@@ -34,5 +34,5 @@ int t_main()
 		aux = aux->nextt;
 	}
 	return 0;
-	AlteraOperacao(&headop, 2, 4, 5, 8, 9, 0, 0);
+	//AlteraOperacao(&headop, 2, 4, 5, 8, 9, 0, 0);
 }

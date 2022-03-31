@@ -1,3 +1,3 @@
 ﻿  T_Main.c
-C:\Users\JoaoMacieira\Desktop\Trabalho_de_EDA-1e485c4d0bc7dc598a9fe7add649bf38d93a6cbd\Trabalho_EDA\Trabalho_EDA\T_Main.c(24,5): warning C4101: 'otemp': unreferenced local variable
-  Trabalho_EDA.vcxproj -> C:\Users\JoaoMacieira\Desktop\Trabalho_de_EDA-1e485c4d0bc7dc598a9fe7add649bf38d93a6cbd\Trabalho_EDA\x64\Debug\Trabalho_EDA.exe
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(24,5): warning C4101: 'otemp': variável local não referenciada
+  Trabalho_EDA.vcxproj -> C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Trabalho_EDA.exe

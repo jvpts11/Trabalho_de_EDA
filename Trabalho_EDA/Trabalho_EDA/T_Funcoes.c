@@ -65,12 +65,19 @@ void NovaOperacao(o** h, int no)
 //Função que remove a operação que o utilizador escolher
 void RemoveOperacao(o** h, int id)
 {
+	o* aux;
 	o* toRemove = ProcuraOperacao(*h, id);
 	if (toRemove == *h)
 	{
 		o* DeptoRemove = ProcuraOperacao(*h, id + 1);
 		toRemove->nextt = NULL;
 		*h = DeptoRemove;
+		aux = *h;
+		while (aux != NULL)
+		{
+			aux->number = aux->number - 1;
+			aux = aux->nextt;
+		}
 	}
 	else if (toRemove->nextt == NULL)
 	{
@@ -83,6 +90,12 @@ void RemoveOperacao(o** h, int id)
 		o* DeptoRemove = ProcuraOperacao(*h, id + 1);
 		toRemove->nextt = NULL;
 		AnttoRemove->nextt = DeptoRemove;
+		aux = DeptoRemove;
+		while (aux != NULL)
+		{
+			aux->number = aux->number - 1;
+			aux = aux->nextt;
+		}
 	}
 }
 
