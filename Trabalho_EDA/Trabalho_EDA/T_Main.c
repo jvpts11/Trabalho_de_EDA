@@ -3,9 +3,7 @@
 * E-mail: a21871@alunos.ipca.pt
 * Data:14/03/2022
 *
-* Colocar outros contribuintes aqui abaixo:
-*
-*
+*Descrição: Ficheiro que invoca todos os métodos dos outros
 */
 
 //Bibliotecas nativas de C

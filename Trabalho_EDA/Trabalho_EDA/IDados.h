@@ -6,7 +6,7 @@
 
 
 #pragma region Estruturas
-//Struct para definir as m�quinas que constituem os jobs
+//Struct para geração de uma lista de jobs
 struct Jobs
 {
 	int numero;
@@ -15,6 +15,7 @@ struct Jobs
 
 typedef struct Jobs j;
 
+//Struct para geração de uma lista de Máquinas
 struct Machines
 {
 	int id;
@@ -24,6 +25,7 @@ struct Machines
 
 typedef struct Machines m_t;
 
+//Struct para geração de uma lista de operações
 struct Operations
 {
 	int job;

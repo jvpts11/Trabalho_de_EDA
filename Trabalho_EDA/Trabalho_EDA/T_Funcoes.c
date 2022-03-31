@@ -62,7 +62,7 @@ void NovaOperacao(o** h, int no)
 	}
 }
 
-//Função que remove a operação que o utilizador escolher
+//Função que remove a operação que o utilizador escolher, recebe um apontador para uma operação e seu id
 void RemoveOperacao(o** h, int id)
 {
 	o* aux;
@@ -138,7 +138,7 @@ short t_detQTD_Max_de_Tempo(m_t*h) {
 	return tempoMax;
 }
 
-//Retorna a quantidade máxima de tempo em segundos
+//Retorna a quantidade mínima de tempo em segundos
 short t_detQTD_Min_de_Tempo(m_t* h) {
 	m_t* aux = h;
 	int tempoMin = INT_MAX;

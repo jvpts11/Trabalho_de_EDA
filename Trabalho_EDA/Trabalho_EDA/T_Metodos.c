@@ -3,7 +3,7 @@
 *E-mail:a21871@alunos.ipca.pt
 * Data:16/03/2022
 * 
-* Descrição: Ficheiro que contém os métodos e funções para manipulação de ficheiros
+* Descrição: Ficheiro que contém os métodos e funções para manipulação de ficheiros e criação de listas de máquinas
 */
 
 #include <stdio.h>
@@ -27,12 +27,14 @@ m_t* criarNovoBloco(int machineId,short tempoDeProd) {
 	return blocoNovo;
 }
 
+//Método para criação uma nova head na lista de máquinas
 m_t* criarNovaHead(m_t **h,m_t *bloco_para_ser_inserido) {
 	bloco_para_ser_inserido->next = *h;
 	*h = bloco_para_ser_inserido;
 	return bloco_para_ser_inserido;
 }
 
+//Método para a vizualização de uma lista de máquinas
 void imprimirLista(m_t* head) {
 	m_t* temp = head;
 
