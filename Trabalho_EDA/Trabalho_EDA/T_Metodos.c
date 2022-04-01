@@ -29,6 +29,7 @@ m_t* criarNovoBloco(int machineId,short tempoDeProd) {
 
 //Método para criação uma nova head na lista de máquinas
 m_t* criarNovaHead(m_t **h,m_t *bloco_para_ser_inserido) {
+	if (h == NULL || bloco_para_ser_inserido == NULL) return NULL;
 	bloco_para_ser_inserido->next = *h;
 	*h = bloco_para_ser_inserido;
 	return bloco_para_ser_inserido;
