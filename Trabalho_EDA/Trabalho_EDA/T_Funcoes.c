@@ -37,6 +37,7 @@ o* CriaOperacao(int job, int id)
 //Função que procura uma operação
 o* ProcuraOperacao(o* h, int id)
 {
+	if (h == NULL)return NULL;
 	o* found = NULL;
 	o* aux = h;
 	while (aux)
@@ -126,11 +127,12 @@ void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short 
 #pragma region Funções_de_Tempo
 //Retorna a quantidade máxima de tempo em segundos
 short t_detQTD_Max_de_Tempo(m_t*h) {
+	if (h == NULL) return NULL;
 	m_t* aux = h;
-	int tempoMax = INT_MIN;
+	int tempoMax = aux->tempoDeProducao;
 
 	while (aux !=NULL) {
-		if (tempoMax < aux->tempoDeProducao) {
+		if (aux->tempoDeProducao > tempoMax) {
 			tempoMax = aux->tempoDeProducao;
 		}
 		aux = aux->next;
@@ -140,38 +142,34 @@ short t_detQTD_Max_de_Tempo(m_t*h) {
 
 //Retorna a quantidade mínima de tempo em segundos
 short t_detQTD_Min_de_Tempo(m_t* h) {
+	if (h == NULL) return NULL;
 	m_t* aux = h;
-	int tempoMin = INT_MAX;
+	short tempoMin = aux->tempoDeProducao;
 
-	while (h != NULL) {
-		if (tempoMin > aux->tempoDeProducao) {
+	while (aux != NULL) {
+		if (aux->tempoDeProducao < tempoMin) {
 			tempoMin = aux->tempoDeProducao;
 		}
 		aux = aux->next;
 	}
-
+	
 	return tempoMin;
 }
 
 //Retorna a quantidade média de tempo em segundos
 short t_detQTD_Med_de_Tempo(m_t*h) {
-
-	m_t* aux = h;
 	if (h == NULL) return NULL;
 
-	short media = 0;
-	short unidades_de_tempo = 0;
+	m_t* aux = h;
 
-	int nmaquinas = 0;
+	short media = 0;
+	short nmaquinas = 0;
+	
 	while (aux!=NULL) {
-		nmaquinas++;
+		nmaquinas = nmaquinas + 1;
+		media += aux->tempoDeProducao;
 		aux = aux->next;
 	}
-
-	for (int i = 0; i < nmaquinas; i++) {
-		media += unidades_de_tempo;
-	}
-
 	short mediaFinal = media / nmaquinas;
 
 	return mediaFinal;

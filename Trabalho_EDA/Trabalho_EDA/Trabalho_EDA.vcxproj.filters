@@ -27,9 +27,6 @@
     <ClCompile Include="T_Debug.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="T_Interface.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IDados.h">

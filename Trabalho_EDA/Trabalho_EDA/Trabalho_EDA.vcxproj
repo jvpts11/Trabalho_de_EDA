@@ -21,7 +21,6 @@
   <ItemGroup>
     <ClCompile Include="T_Debug.c" />
     <ClCompile Include="T_Funcoes.c" />
-    <ClCompile Include="T_Interface.c" />
     <ClCompile Include="T_Main.c" />
     <ClCompile Include="T_Metodos.c" />
   </ItemGroup>

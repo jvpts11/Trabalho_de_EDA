@@ -10,27 +10,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+
 #include "IDados.h"
 
-//�ltera��o do m�todo Main
-#define t_main main
-
-//M�todo main, alterado para dar mais legibilidade
-int t_main()
+//M�todo main, alterado para dar mais legibilidade, contém um menu para teste e utilização do programa
+int main()
 {
-	o* headop = NULL;
-	o* otemp;
-	j* h;
-	h = CriaJob(1);
-	NovaOperacao(&headop, 8);
-	RemoveOperacao(&headop, 5);
-
-	o* aux = headop;
-	while (aux)
-	{
-		printf("%d\n", aux->number);
-		aux = aux->nextt;
-	}
-	return 0;
-	//AlteraOperacao(&headop, 2, 4, 5, 8, 9, 0, 0);
+	bool gravouLista;
+	short media;
+	m_t* l = iniciarListaAPartirDeFicheiros();
+	imprimirMaquinas(l);
+	media = t_detQTD_Med_de_Tempo(l);
+	printf("%d - media",media);
 }

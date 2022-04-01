@@ -3,7 +3,8 @@
 *E-mail:a21871@alunos.ipca.pt
 * Data:16/03/2022
 * 
-* Descrição: Ficheiro que contém os métodos e funções para manipulação de ficheiros e criação de listas de máquinas
+* Descrição: Ficheiro que contém os métodos e funções para manipulação de 
+* ficheiros e criação de listas de máquinas
 */
 
 #include <stdio.h>
@@ -15,6 +16,7 @@
 
 FILE* dadosGravados;
 const char d[30] = "Dados_Gravados.txt";
+const char e[30] = "Dados_Gravados2.txt";
 int a = 10, b = 20; //Variáveis para testar leitura e escrita de ficheiros
 
 #pragma region Manipulacao_de_Listas
@@ -36,7 +38,7 @@ m_t* criarNovaHead(m_t **h,m_t *bloco_para_ser_inserido) {
 }
 
 //Método para a vizualização de uma lista de máquinas
-void imprimirLista(m_t* head) {
+void imprimirMaquinas(m_t* head) {
 	m_t* temp = head;
 
 	while (temp != NULL) {
@@ -48,6 +50,20 @@ void imprimirLista(m_t* head) {
 	printf("\n");
 }
 
+void gerarOperacoes() {
+	o* headop = NULL;
+	o* otemp;
+
+	NovaOperacao(&headop, 8);
+
+	o* aux = headop;
+	while (aux)
+	{
+		printf("%d\n", aux->number);
+		aux = aux->nextt;
+	}
+}
+
 #pragma endregion
 
 #pragma region Manipulacao_de_Ficheiros
@@ -56,15 +72,12 @@ m_t* iniciarListaAPartirDeFicheiros() {
 	m_t* next = NULL;
 	m_t* temp = NULL;
 
-	dadosGravados = fopen(d, "r");
+	dadosGravados = fopen("Dados_Gravados.txt", "r");
 	int id = 0;
 	short tempoDeProd = 0;
 
-	int numeroDeMaquinas = lerNumeroDeMaquinas();
-
-	for (int i = 0; i < numeroDeMaquinas; i++) {
-		fscanf(dadosGravados, "%d,%d", &id,&tempoDeProd);
-		temp = criarNovoBloco(i,i);
+	while (fscanf(dadosGravados, "%d,%hi\n", &id, &tempoDeProd) != EOF) {
+		temp = criarNovoBloco(id, tempoDeProd);
 		criarNovaHead(&next, temp);
 	}
 
@@ -95,12 +108,10 @@ int lerNumeroDeMaquinas() {
 bool gravarEmFicheiro(m_t* h) {
 	m_t* aux = h;
 
-	if (h == NULL) return false;
-
-	dadosGravados = fopen(d,"w");
+	dadosGravados = fopen(e,"w");
 	while (aux !=NULL) {
-		fprintf(dadosGravados,"%d,%d",aux->id,aux->tempoDeProducao);
-		h = h->next;
+		fprintf(dadosGravados,"%d,%d\n",aux->id,aux->tempoDeProducao);
+		aux = aux->next;
 	}
 	fclose(dadosGravados);
 
