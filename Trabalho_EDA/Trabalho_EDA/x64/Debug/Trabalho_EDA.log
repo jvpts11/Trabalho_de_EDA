@@ -1,7 +1,3 @@
-﻿  T_Funcoes.c
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(60,27): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(130,28): warning C4047: 'return': 'short' differs in levels of indirection from 'void *'
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(145,28): warning C4047: 'return': 'short' differs in levels of indirection from 'void *'
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(161,28): warning C4047: 'return': 'short' differs in levels of indirection from 'void *'
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(35): warning C4716: 'CriaOperacao': must return a value
+﻿  T_Main.c
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(19,7): warning C4101: 'gravouLista': unreferenced local variable
   Trabalho_EDA.vcxproj -> C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Trabalho_EDA.exe

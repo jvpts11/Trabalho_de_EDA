@@ -14,10 +14,9 @@
 
 #include "IDados.h"
 
-FILE* dadosGravados;
-const char d[30] = "Dados_Gravados.txt";
-const char e[30] = "Dados_Gravados2.txt";
-int a = 10, b = 20; //Variáveis para testar leitura e escrita de ficheiros
+FILE* dadosGravados; //Apontador do ficheiro
+const char d[30] = "Dados_Gravados.txt"; //Arquivo de texto de origem para carregamento da lista
+const char e[30] = "Dados_Gravados2.txt"; //Arquivo de texto de chegada para gravação da lista
 
 #pragma region Manipulacao_de_Listas
 // Função para criar novo bloco na lista, recebe dois argumentos: o id e o tempo de produção, que é um short.
