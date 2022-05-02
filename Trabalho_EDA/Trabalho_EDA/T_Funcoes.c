@@ -23,7 +23,6 @@ j* CriaJob(int n)
 	return novo;
 }
 
-
 //Função que cria uma operação
 o* CriaOperacao(int job, int id)
 {

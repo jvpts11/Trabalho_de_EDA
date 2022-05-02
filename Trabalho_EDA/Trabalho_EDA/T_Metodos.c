@@ -36,6 +36,10 @@ m_t* criarNovaHead(m_t **h,m_t *bloco_para_ser_inserido) {
 	return bloco_para_ser_inserido;
 }
 
+m_t* removeMaquina(m_t* h, int id) {
+
+}
+
 //Método para a vizualização de uma lista de máquinas
 void imprimirMaquinas(m_t* head) {
 	m_t* temp = head;
@@ -53,7 +57,7 @@ void gerarOperacoes() {
 	o* headop = NULL;
 	o* otemp;
 
-	NovaOperacao(&headop, 8);
+	NovaOperacao(&headop, 7);
 
 	o* aux = headop;
 	while (aux)

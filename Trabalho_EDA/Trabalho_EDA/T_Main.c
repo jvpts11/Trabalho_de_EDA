@@ -12,6 +12,7 @@
 #include <stdbool.h>
 
 #include "IDados.h"
+#include "IFuncoes.h"
 
 //M�todo main, alterado para dar mais legibilidade, contém um menu para teste e utilização do programa
 int main()

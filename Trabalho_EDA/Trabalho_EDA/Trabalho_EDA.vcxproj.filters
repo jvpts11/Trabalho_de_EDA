@@ -24,12 +24,12 @@
     <ClCompile Include="T_Funcoes.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="T_Debug.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IDados.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFuncoes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

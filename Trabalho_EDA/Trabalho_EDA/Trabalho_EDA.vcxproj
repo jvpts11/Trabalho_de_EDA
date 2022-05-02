@@ -19,12 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="T_Debug.c" />
     <ClCompile Include="T_Funcoes.c" />
     <ClCompile Include="T_Main.c" />
     <ClCompile Include="T_Metodos.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IFuncoes.h" />
     <ClInclude Include="IDados.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
