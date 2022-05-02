@@ -3,10 +3,14 @@
 * E-mail: a21871@alunos.ipca.pt
 * Data:14/03/2022
 * 
-* Descrição: Interface que contém algumas definições de dados
+* Descrição: Interface que contém as estruturas que definem os blocos das listas
 */
 
 #pragma once
+
+#ifndef N 10
+
+
 
 #pragma region Estruturas
 //Struct para geração de uma lista de jobs
@@ -44,11 +48,10 @@ typedef struct Operations o;
 
 #pragma region Metodos
 
-m_t* criarNovoBloco(int arg1, short arg2);
-m_t* criarNovaHead(m_t** h, m_t* bloco_para_ser_inserido);
 void imprimirMaquinas(m_t* head);
-m_t* iniciarListaAPartirDeFicheiros();
 int lerNumeroDeMaquinas();
 bool gravarEmFicheiro(m_t* h);
 
 #pragma endregion
+
+#endif

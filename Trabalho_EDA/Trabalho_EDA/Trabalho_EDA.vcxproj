@@ -20,12 +20,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="T_Funcoes.c" />
+    <ClCompile Include="T_Jobs.c" />
     <ClCompile Include="T_Main.c" />
+    <ClCompile Include="T_Maquinas.c" />
     <ClCompile Include="T_Metodos.c" />
+    <ClCompile Include="T_Operacoes.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IFuncoes.h" />
     <ClInclude Include="IDados.h" />
+    <ClInclude Include="IJobs.h" />
+    <ClInclude Include="IMaquinas.h" />
+    <ClInclude Include="IOperacoes.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

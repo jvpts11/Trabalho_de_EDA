@@ -3,8 +3,7 @@
 *E-mail:a21871@alunos.ipca.pt
 * Data:16/03/2022
 * 
-* Descrição: Ficheiro que contém os métodos e funções para manipulação de 
-* ficheiros e criação de listas de máquinas
+* Descrição: Ficheiro que contém métodos e funções diversos (que não necessariamente alteram as listas)
 */
 
 #include <stdio.h>
@@ -19,26 +18,6 @@ const char d[30] = "Dados_Gravados.txt"; //Arquivo de texto de origem para carre
 const char e[30] = "Dados_Gravados2.txt"; //Arquivo de texto de chegada para gravação da lista
 
 #pragma region Manipulacao_de_Listas
-// Função para criar novo bloco na lista, recebe dois argumentos: o id e o tempo de produção, que é um short.
-m_t* criarNovoBloco(int machineId,short tempoDeProd) {
-	m_t* blocoNovo = malloc(sizeof(m_t));
-	blocoNovo->id = machineId;
-	blocoNovo->tempoDeProducao = tempoDeProd;
-	blocoNovo->next;
-	return blocoNovo;
-}
-
-//Método para criação uma nova head na lista de máquinas
-m_t* criarNovaHead(m_t **h,m_t *bloco_para_ser_inserido) {
-	if (h == NULL || bloco_para_ser_inserido == NULL) return NULL;
-	bloco_para_ser_inserido->next = *h;
-	*h = bloco_para_ser_inserido;
-	return bloco_para_ser_inserido;
-}
-
-m_t* removeMaquina(m_t* h, int id) {
-
-}
 
 //Método para a vizualização de uma lista de máquinas
 void imprimirMaquinas(m_t* head) {
