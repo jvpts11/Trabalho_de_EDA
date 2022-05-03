@@ -5,8 +5,8 @@
 #include "IMaquinas.h"
 
 // Função para criar novo bloco na lista, recebe dois argumentos: o id e o tempo de produção, que é um short.
-m_t* t_m_criarNovoBloco(int machineId, short tempoDeProd) {
-	m_t* blocoNovo = malloc(sizeof(m_t));
+m* t_m_criar_Novo_Bloco(int machineId, short tempoDeProd) {
+	m* blocoNovo = malloc(sizeof(m));
 	blocoNovo->id = machineId;
 	blocoNovo->tempoDeProducao = tempoDeProd;
 	blocoNovo->next;
@@ -14,13 +14,31 @@ m_t* t_m_criarNovoBloco(int machineId, short tempoDeProd) {
 }
 
 //Método para criação uma nova head na lista de máquinas
-m_t* t_m_Inserir_Novo_Bloco(m_t** h, m_t* bloco_para_ser_inserido) {
-	if (h == NULL || bloco_para_ser_inserido == NULL) return NULL;
-	bloco_para_ser_inserido->next = *h;
-	*h = bloco_para_ser_inserido;
-	return bloco_para_ser_inserido;
+m* t_m_inserir_novo_Bloco(m** h, m* maquina) {
+	if (h == NULL || maquina == NULL) return NULL;
+	maquina->next = *h;
+	*h = maquina;
+	return maquina;
 }
 
-m_t* t_m_removeMaquina(m_t* h, int id) {
+m* t_m_procurar_Maquina(m* maquinas, int id) {
+	m* aux = NULL;
+	aux = maquinas;
+
+	while (aux != NULL) {
+		if (aux->id == id) {
+			aux->id = id;
+		}
+	}
+	return aux;
+}
+
+m* t_m_remove_Maquina(m* h, int id) {
+	if (h == NULL) return NULL;
+	m* aux = NULL;
+	aux = h;
+	while (aux != NULL) {
+
+	}
 
 }

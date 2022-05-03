@@ -13,8 +13,8 @@
 
 #ifndef N
 
-short t_f_Max_de_Tempo(m_t* h);
-short t_f_Min_de_Tempo(m_t* h);
-short t_f_Med_de_Tempo(m_t* h);
+short t_f_Max_de_Tempo(m* h);
+short t_f_Min_de_Tempo(m* h);
+short t_f_Med_de_Tempo(m* h);
 
 #endif

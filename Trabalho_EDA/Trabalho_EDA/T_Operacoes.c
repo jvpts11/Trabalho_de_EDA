@@ -10,7 +10,7 @@ o* CriaOperacao(int job, int id)
 	o* novo = malloc(sizeof(o));
 	novo->job = job;
 	novo->number = id;
-	novo->next = NULL;
+	novo->head = NULL;
 	novo->nextt = NULL;
 }
 
@@ -85,13 +85,13 @@ void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short 
 {
 	o* alterar = ProcuraOperacao(*h, id);
 
-	m_t* novo = criarNovoBloco(a, b);
+	m* novo = criarNovoBloco(a, b);
 
-	alterar->next = novo;
-	m_t* novo2 = NULL;
+	alterar->head = novo;
+	m* novo2 = NULL;
 	if (c != 0 && d != 0)
 	{
-		m_t* novo2 = criarNovoBloco(c, d);
+		m* novo2 = criarNovoBloco(c, d);
 		novo->next = novo2;
 	}
 	else if (e != 0 && f != 0)

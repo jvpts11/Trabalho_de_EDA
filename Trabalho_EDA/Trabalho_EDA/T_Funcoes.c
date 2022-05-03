@@ -20,9 +20,9 @@
 
 #pragma region Funções_de_Tempo
 //Retorna a quantidade máxima de tempo em segundos
-short t_f_Max_de_Tempo(m_t*h) {
+short t_f_Max_de_Tempo(m*h) {
 	if (h == NULL) return NULL;
-	m_t* aux = h;
+	m* aux = h;
 	int tempoMax = aux->tempoDeProducao;
 
 	while (aux !=NULL) {
@@ -35,9 +35,9 @@ short t_f_Max_de_Tempo(m_t*h) {
 }
 
 //Retorna a quantidade mínima de tempo em segundos
-short t_f_Min_de_Tempo(m_t* h) {
+short t_f_Min_de_Tempo(m* h) {
 	if (h == NULL) return NULL;
-	m_t* aux = h;
+	m* aux = h;
 	short tempoMin = aux->tempoDeProducao;
 
 	while (aux != NULL) {
@@ -51,10 +51,10 @@ short t_f_Min_de_Tempo(m_t* h) {
 }
 
 //Retorna a quantidade média de tempo em segundos
-short t_f_Med_de_Tempo(m_t*h) {
+short t_f_Med_de_Tempo(m*h) {
 	if (h == NULL) return NULL;
 
-	m_t* aux = h;
+	m* aux = h;
 
 	short media = 0;
 	short nmaquinas = 0;

@@ -20,8 +20,8 @@ const char e[30] = "Dados_Gravados2.txt"; //Arquivo de texto de chegada para gra
 #pragma region Manipulacao_de_Listas
 
 //Método para a vizualização de uma lista de máquinas
-void imprimirMaquinas(m_t* head) {
-	m_t* temp = head;
+void imprimirMaquinas(m* head) {
+	m* temp = head;
 
 	while (temp != NULL) {
 		printf("%d-\n", temp->id);
@@ -50,9 +50,9 @@ void gerarOperacoes() {
 
 #pragma region Manipulacao_de_Ficheiros
 // Método que inicia as listas, ele abre o ficheiro, em seguida recebe um inteiro de uma função, por fim retorna uma lista
-m_t* iniciarListaAPartirDeFicheiros() {
-	m_t* next = NULL;
-	m_t* temp = NULL;
+m* iniciarListaAPartirDeFicheiros() {
+	m* next = NULL;
+	m* temp = NULL;
 
 	dadosGravados = fopen("Dados_Gravados.txt", "r");
 	int id = 0;
@@ -87,8 +87,8 @@ int lerNumeroDeMaquinas() {
 }
 
 // Método para receber os dados das listas e gravar os dados em um ficheiro de texto
-bool gravarEmFicheiro(m_t* h) {
-	m_t* aux = h;
+bool gravarEmFicheiro(m* h) {
+	m* aux = h;
 
 	dadosGravados = fopen(e,"w");
 	while (aux !=NULL) {

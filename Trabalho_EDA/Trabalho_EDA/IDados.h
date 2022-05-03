@@ -7,6 +7,7 @@
 */
 
 #pragma once
+#include <stdbool.h>
 
 #ifndef N 10
 
@@ -18,6 +19,7 @@ struct Jobs
 {
 	int numero;
 	struct Jobs* next;
+	struct Jobs* operation;
 };
 
 typedef struct Jobs j;
@@ -30,14 +32,14 @@ struct Machines
 	struct Machines* next;
 };
 
-typedef struct Machines m_t;
+typedef struct Machines m;
 
 //Struct para geração de uma lista de operações
 struct Operations
 {
 	int job;
 	int number;
-	struct Machines* next;
+	struct Machines* head;
 	struct Operations* nextt;
 };
 
@@ -48,9 +50,9 @@ typedef struct Operations o;
 
 #pragma region Metodos
 
-void imprimirMaquinas(m_t* head);
+void imprimirMaquinas(m* head);
 int lerNumeroDeMaquinas();
-bool gravarEmFicheiro(m_t* h);
+bool gravarEmFicheiro(m* h);
 
 #pragma endregion
 
