@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <memory.h>
 
 #include "IDados.h"
 #include "IMaquinas.h"
@@ -35,10 +36,23 @@ m* t_m_procurar_Maquina(m* maquinas, int id) {
 
 m* t_m_remove_Maquina(m* h, int id) {
 	if (h == NULL) return NULL;
-	m* aux = NULL;
-	aux = h;
-	while (aux != NULL) {
-
+	
+	if (h->id == id) {
+		m* aux = h;
+		h = h->next;
+		free(aux);
 	}
 
+	return h;
+}
+
+void t_m_apagar_Maquinas(m** h) {
+	if (h == NULL) return NULL;
+	m* aux;
+	while (*h) {
+		aux = *h;
+		*h = (*h)->next;
+		free(aux);
+	}
+	
 }

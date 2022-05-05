@@ -2,4 +2,4 @@
 
 #include "IDados.h"
 
-j* t_j_Cria_Job(int n);
+j* t_j_Cria_Job(int jobNumber, o* opHead);
