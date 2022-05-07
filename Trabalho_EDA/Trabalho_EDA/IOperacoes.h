@@ -1,3 +1,11 @@
+/**
+* @file IOperacoes.h
+* @author Joao_Tavares
+* @date 14/03/2022
+* 
+* @brief .h que contém as assinaturas das funções relacionadas às operações
+*/
+
 #pragma once
 
 #include "IDados.h"

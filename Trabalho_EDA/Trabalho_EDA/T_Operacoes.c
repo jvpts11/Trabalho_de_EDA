@@ -1,3 +1,8 @@
+/**
+* @file T_Operacoes.c
+* @author Joao_Tavares
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -29,6 +34,20 @@ o* ProcuraOperacao(o* h, int id)
 		aux = aux->nextt;
 	}
 	return found;
+}
+
+void gerarOperacoes() {
+	o* headop = NULL;
+	o* otemp;
+
+	NovaOperacao(&headop, 7);
+
+	o* aux = headop;
+	while (aux)
+	{
+		printf("%d\n", aux->number);
+		aux = aux->nextt;
+	}
 }
 
 //Função que cria as operações com o número que o utilizador quiser

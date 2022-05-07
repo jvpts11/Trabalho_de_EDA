@@ -1,9 +1,9 @@
 ﻿/**
-* Autor: Jo�o Tavares
-* E-mail: a21871@alunos.ipca.pt
-* Data:14/03/2022
+* @file T_Main.c
+* @author Joao_Tavares
+* @date 14/03/2022
 *
-*Descrição: Ficheiro que invoca todos os métodos dos outros
+* @brief Ficheiro que invoca todos os métodos dos outros
 */
 
 //Bibliotecas nativas de C
@@ -18,7 +18,9 @@
 #include "IMaquinas.h"
 #include "IOperacoes.h"
 
-//M�todo main, alterado para dar mais legibilidade, contém um menu para teste e utilização do programa
+/**
+* @brief metodo main
+*/
 int main()
 {
 	

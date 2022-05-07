@@ -1,3 +1,11 @@
+/**
+* @file IMaquinas.h
+* @author Joao_Tavares
+* @date 14/03/2022
+*
+* @brief .h que contém as assinaturas das funções relacionadas às máquinas
+*/
+
 #pragma once
 
 #include "IDados.h"

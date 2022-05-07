@@ -1,20 +1,20 @@
 ﻿/**
-* Autor: Jo�o Tavares
-* E-mail: a21871@alunos.ipca.pt
-* Data:14/03/2022
+* @file IDados.h
+* @author Joao_Tavares
+* @date 14/03/2022
 * 
-* Descrição: Interface que contém as estruturas que definem os blocos das listas
+* @brief .h que contém as estruturas que definem os blocos das listas
 */
 
 #pragma once
 #include <stdbool.h>
 
-#ifndef N 10
-
-
+#define L 40
 
 #pragma region Estruturas
-//Struct para geração de uma lista de jobs
+/**
+* @brief estrutura para representação de um job
+*/
 struct Jobs
 {
 	int numero;
@@ -24,7 +24,9 @@ struct Jobs
 
 typedef struct Jobs j;
 
-//Struct para geração de uma lista de Máquinas
+/**
+* @brief estrutura para representação de uma máquina
+*/
 struct Machines
 {
 	int id;
@@ -34,7 +36,9 @@ struct Machines
 
 typedef struct Machines m;
 
-//Struct para geração de uma lista de operações
+/**
+* @brief estrutura para representação de uma operação
+*/
 struct Operations
 {
 	int job;
@@ -45,15 +49,18 @@ struct Operations
 
 typedef struct Operations o;
 
+typedef struct Dados {
+	void* data;
+	struct Dados* next;
+}Dados;
+
 
 #pragma endregion
 
 #pragma region Metodos
 
-void imprimirMaquinas(m* head);
-int lerNumeroDeMaquinas();
-bool gravarEmFicheiro(m* h);
+void t_m_imprimir_maquinas(m* head);
+m* t_m_gerar_listas_a_partir_de_ficheiros_de_texto(char nome_do_arquivo[20]);
+bool t_m_gravar_dados_em_ficheiro_de_texto(m* h, char nome_do_arquivo[20]);
 
 #pragma endregion
-
-#endif

@@ -1,10 +1,9 @@
 /**
-* Autor: João Tavares
-* E-mail: a21871@alunos.ipca.pt
-* Data:16/03/2022
+* @file T_Funcoes.c
+* @author Joao_Tavares
+* @date 16/03/2022
 * 
-* Descrição: Esse arquivo guarda as funções para realizar operações, listagens dentre outras coisas que
-* precisem retornar dados.
+* @brief Esse arquivo guarda as funções de tempo
 */
 
 #include <stdio.h>
@@ -13,13 +12,14 @@
 #include <stdbool.h>
 #include "IDados.h"
 
-#pragma region Funções_Job_e_Operations
-
-
-#pragma endregion
-
 #pragma region Funções_de_Tempo
-//Retorna a quantidade máxima de tempo em segundos
+/**
+* @brief Função que calcula quantidade máxima de tempo em um job
+* 
+* @param h - apontador do inicio de uma lista
+* 
+* @return tempo máximo encontrado
+*/
 short t_f_Max_de_Tempo(m*h) {
 	if (h == NULL) return NULL;
 	m* aux = h;
@@ -34,7 +34,13 @@ short t_f_Max_de_Tempo(m*h) {
 	return tempoMax;
 }
 
-//Retorna a quantidade mínima de tempo em segundos
+/**
+* @brief Função que calcula quantidade mínima de tempo em um job
+*
+* @param h - apontador do inicio de uma lista
+* 
+* @return tempo mínimo encontrado
+*/
 short t_f_Min_de_Tempo(m* h) {
 	if (h == NULL) return NULL;
 	m* aux = h;
@@ -50,7 +56,13 @@ short t_f_Min_de_Tempo(m* h) {
 	return tempoMin;
 }
 
-//Retorna a quantidade média de tempo em segundos
+/**
+* @brief Função que calcula quantidade média de tempo em um job
+*
+* @param h - apontador do inicio de uma lista
+* 
+* @return média aritmética do tempo
+*/
 short t_f_Med_de_Tempo(m*h) {
 	if (h == NULL) return NULL;
 
