@@ -12,7 +12,6 @@
 #include <memory.h>
 
 #include "IDados.h"
-#include "IJobs.h"
 
 
 /**

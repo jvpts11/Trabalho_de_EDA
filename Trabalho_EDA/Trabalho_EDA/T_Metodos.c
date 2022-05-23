@@ -12,10 +12,6 @@
 #include <memory.h>
 
 #include "IDados.h"
-#include "IMaquinas.h"
-#include "IOperacoes.h"
-
-FILE* dadosGravados; //Apontador do ficheiro
 
 #pragma region vizualizacao_de_listas
 
@@ -24,6 +20,7 @@ FILE* dadosGravados; //Apontador do ficheiro
 * 
 * @param head - início da lista de máquinas
 */
+
 void t_m_imprimir_maquinas(m* head) {
 	m* temp = head;
 
@@ -47,22 +44,54 @@ void t_m_imprimir_maquinas(m* head) {
 * 
 * @return lista de máquians gerada a partir de um ficheiro
 */
-m* t_m_gerar_listas_a_partir_de_ficheiros_de_texto(char nome_do_arquivo[20]) {
+
+m* t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto(FILE*fpm,char nome_do_arquivo[20]) {
 	m* next = NULL;
 	m* temp = NULL;
 
-	dadosGravados = fopen(nome_do_arquivo, "r");
+	
+
+	fpm = fopen(nome_do_arquivo, "r");
 	int id = 0;
 	short tempoDeProd = 0;
 
-	while (fscanf(dadosGravados, "%d,%hi\n", &id, &tempoDeProd) != EOF) {
+	while (fscanf(fpm, "%d,%hi\n", &id, &tempoDeProd) != EOF) {
 		temp = t_m_criar_Novo_Bloco(id, tempoDeProd);
 		t_m_inserir_novo_Bloco(&next, temp);
 	}
 
-	fclose(dadosGravados);
+	fclose(fpm);
 
 	return temp;
+}
+
+o* t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto(m*h,j* job, FILE* fpo, char nome_do_arquivo[20]) {
+	o* next = NULL;
+	o* temp = NULL;
+
+	fpo = fopen(nome_do_arquivo, "r");
+	int id = 0;
+
+	while (fscanf(fpo,"%d",&id) != EOF) {
+		temp = t_o_cria_operacao(h,job,id);
+		t_o_inserir_nova_Operacao(&next,temp);
+	}
+
+	fclose(fpo);
+
+	return temp;
+}
+
+j* t_j_gerar_operacoes_a_partir_de_ficheiros_de_texto(FILE* fpj, char nome_do_arquivo[20]) {
+	j* next = NULL;
+	j* temp = NULL;
+
+	fpj = fopen(nome_do_arquivo, "r");
+	int id = 0;
+
+	while (fscanf(fpj,"%d",&id) != EOF) {
+
+	}
 }
 
 /**
@@ -75,6 +104,8 @@ m* t_m_gerar_listas_a_partir_de_ficheiros_de_texto(char nome_do_arquivo[20]) {
 */
 bool t_m_gravar_dados_em_ficheiro_de_texto(m* h, char nome_do_arquivo[20]) {
 	m* aux = h;
+
+	FILE* dadosGravados;
 
 	dadosGravados = fopen(nome_do_arquivo,"w");
 	while (aux !=NULL) {

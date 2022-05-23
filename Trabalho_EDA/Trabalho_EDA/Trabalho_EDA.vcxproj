@@ -27,11 +27,7 @@
     <ClCompile Include="T_Operacoes.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IFuncoes.h" />
     <ClInclude Include="IDados.h" />
-    <ClInclude Include="IJobs.h" />
-    <ClInclude Include="IMaquinas.h" />
-    <ClInclude Include="IOperacoes.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

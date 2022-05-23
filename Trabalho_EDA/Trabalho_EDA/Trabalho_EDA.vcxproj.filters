@@ -38,17 +38,5 @@
     <ClInclude Include="IDados.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IFuncoes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IJobs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IMaquinas.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IOperacoes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

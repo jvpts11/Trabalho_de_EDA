@@ -13,10 +13,6 @@
 
 //Header Files usados
 #include "IDados.h"
-#include "IFuncoes.h"
-#include "IJobs.h"
-#include "IMaquinas.h"
-#include "IOperacoes.h"
 
 /**
 * @brief metodo main
