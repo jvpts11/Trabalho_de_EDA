@@ -33,6 +33,10 @@ void t_m_imprimir_maquinas(m* head) {
 	printf("\n");
 }
 
+void t_j_imprimirjobs(j* head) {
+
+}
+
 
 #pragma endregion
 
@@ -82,14 +86,17 @@ o* t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto(m*h,j* job, FILE* fpo, cha
 	return temp;
 }
 
-j* t_j_gerar_operacoes_a_partir_de_ficheiros_de_texto(FILE* fpj, char nome_do_arquivo[20]) {
+j* t_j_gerar_jobs_a_partir_de_ficheiros_de_texto(FILE* fpj, char nome_do_arquivo[20]) {
 	j* next = NULL;
 	j* temp = NULL;
 
 	fpj = fopen(nome_do_arquivo, "r");
-	int id = 0;
+	int Jid = 0;
+	int Oid = 0;
+	int Mid = 0;
+	short Mtime = 0;
 
-	while (fscanf(fpj,"%d",&id) != EOF) {
+	while (fscanf(fpj,"%d,%d,%d,%hi\n",&Jid,&Oid,&Mid,&Mtime) != EOF) {
 
 	}
 }
