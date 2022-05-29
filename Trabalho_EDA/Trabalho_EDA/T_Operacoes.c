@@ -41,7 +41,7 @@ void t_o_gerar_Operacoes() {
 	o* headop = NULL;
 	o* otemp;
 
-	t_inserir_nova_Operacao(&headop, 7);
+	t_o_inserir_nova_Operacao(&headop, 7);
 
 	o* aux = headop;
 	while (aux)
