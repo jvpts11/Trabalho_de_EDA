@@ -1,6 +1,6 @@
 ﻿/**
-* Autor: Jo�o Tavares
-* E-mail: a21871@alunos.ipca.pt
+* Autor: João Monteiro
+* E-mail: a23469@alunos.ipca.pt
 * Data:14/03/2022
 * 
 * Descrição: Interface que contém algumas definições de dados

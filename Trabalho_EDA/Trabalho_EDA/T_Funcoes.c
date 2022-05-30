@@ -1,6 +1,6 @@
 /**
-* Autor: João Tavares
-* E-mail: a21871@alunos.ipca.pt
+* Autor: João Monteiro
+* E-mail: a23469@alunos.ipca.pt
 * Data:16/03/2022
 * 
 * Descrição: Esse arquivo guarda as funções para realizar operações, listagens dentre outras coisas que

@@ -1,6 +1,6 @@
 /**
-*Autor:João Tavares
-*E-mail:a21871@alunos.ipca.pt
+*Autor: João Monteiro
+*E-mail: a23469@alunos.ipca.pt
 * Data:16/03/2022
 * 
 * Descrição: Ficheiro que contém os métodos e funções para manipulação de 
@@ -14,14 +14,13 @@
 
 #include "IDados.h"
 
-FILE* dadosGravados;
-const char d[30] = "Dados_Gravados.txt";
-const char e[30] = "Dados_Gravados2.txt";
-int a = 10, b = 20; //Variáveis para testar leitura e escrita de ficheiros
+FILE* dadosGravados; //Apontador do ficheiro
+const char d[30] = "Dados_Gravados.txt"; //Arquivo de texto de origem para carregamento da lista
+const char e[30] = "Dados_Gravados2.txt"; //Arquivo de texto de chegada para gravação da lista
 
 #pragma region Manipulacao_de_Listas
 // Função para criar novo bloco na lista, recebe dois argumentos: o id e o tempo de produção, que é um short.
-m_t* criarNovoBloco(int machineId,short tempoDeProd) {
+m_t* criarNovoBloco(int machineId, short tempoDeProd) {
 	m_t* blocoNovo = malloc(sizeof(m_t));
 	blocoNovo->id = machineId;
 	blocoNovo->tempoDeProducao = tempoDeProd;
@@ -30,7 +29,7 @@ m_t* criarNovoBloco(int machineId,short tempoDeProd) {
 }
 
 //Método para criação uma nova head na lista de máquinas
-m_t* criarNovaHead(m_t **h,m_t *bloco_para_ser_inserido) {
+m_t* criarNovaHead(m_t** h, m_t* bloco_para_ser_inserido) {
 	if (h == NULL || bloco_para_ser_inserido == NULL) return NULL;
 	bloco_para_ser_inserido->next = *h;
 	*h = bloco_para_ser_inserido;
@@ -43,7 +42,7 @@ void imprimirMaquinas(m_t* head) {
 
 	while (temp != NULL) {
 		printf("%d-\n", temp->id);
-		printf("%d-\n\n",temp->tempoDeProducao);
+		printf("%d-\n\n", temp->tempoDeProducao);
 		temp = temp->next;
 	}
 
@@ -108,9 +107,9 @@ int lerNumeroDeMaquinas() {
 bool gravarEmFicheiro(m_t* h) {
 	m_t* aux = h;
 
-	dadosGravados = fopen(e,"w");
-	while (aux !=NULL) {
-		fprintf(dadosGravados,"%d,%d\n",aux->id,aux->tempoDeProducao);
+	dadosGravados = fopen(e, "w");
+	while (aux != NULL) {
+		fprintf(dadosGravados, "%d,%d\n", aux->id, aux->tempoDeProducao);
 		aux = aux->next;
 	}
 	fclose(dadosGravados);
