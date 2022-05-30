@@ -18,5 +18,13 @@
     <ClCompile Include="T_F2_Main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="T_F2_Manipulacao.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="T_F2_Dados.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
