@@ -1,23 +1,33 @@
 ﻿/**
-* Autor: João Monteiro
-* E-mail: a23469@alunos.ipca.pt
-* Data:14/03/2022
-* 
-* Descrição: Interface que contém algumas definições de dados
+* @file IDados.h
+* @author Joao_Tavares
+* @date 14/03/2022
+*
+* @brief .h que contém as estruturas que definem os blocos das listas
 */
 
+#pragma once
+
+#include <stdbool.h>
+
+#define L 40
 
 #pragma region Estruturas
-//Struct para geração de uma lista de jobs
+/**
+* @brief estrutura para representação de um job
+*/
 struct Jobs
 {
 	int numero;
 	struct Jobs* next;
+	struct Jobs* operation;
 };
 
 typedef struct Jobs j;
 
-//Struct para geração de uma lista de Máquinas
+/**
+* @brief estrutura para representação de uma máquina
+*/
 struct Machines
 {
 	int id;
@@ -25,37 +35,65 @@ struct Machines
 	struct Machines* next;
 };
 
-typedef struct Machines m_t;
+typedef struct Machines m;
 
-//Struct para geração de uma lista de operações
+/**
+* @brief estrutura para representação de uma operação
+*/
 struct Operations
 {
-	int job;
 	int number;
-	struct Machines* next;
+	struct Machines* head;
 	struct Operations* nextt;
 };
 
 typedef struct Operations o;
 
-
 #pragma endregion
 
 #pragma region Metodos
 
-m_t* criarNovoBloco(int arg1, short arg2);
-m_t* criarNovaHead(m_t** h, m_t* bloco_para_ser_inserido);
-j* CriaJob(int n);
-o* CriaOperacao(int job, int id);
-void NovaOperacao(o** h, int no);
-void RemoveOperacao(o** h, int id);
+void t_m_imprimir_maquinas(m* head);
+m* t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto(FILE* fpm, char nome_do_arquivo[20]);
+bool t_m_gravar_dados_em_ficheiro_de_texto(m* h, char nome_do_arquivo[20]);
+
+#pragma endregion
+
+#pragma region Maquinas
+
+m* t_m_criar_Novo_Bloco(int machineId, short tempoDeProd);
+m* t_m_inserir_novo_Bloco(m** h, m* maquina);
+m* t_m_procurar_Maquina(m* maquinas, int id);
+m* t_m_remove_Maquina(m* h, int id);
+void t_m_apagar_Maquinas(m** h);
+
+#pragma endregion
+
+#pragma region Jobs
+
+j* t_j_Cria_Job(int jobNumber);
+j* t_j_Inserir_Novo_Job(j** head, j* job);
+j* t_j_remove_Job(j* h, int jobNumber);
+j* t_j_procurar_Job(j* job, int jobNumber);
+void t_j_apaga_Jobs(j** h);
+
+#pragma endregion
+
+#pragma region Operacoes
+
+o* t_o_cria_operacao(int id);
+o* t_o_procurar_Operacao(o* h, int id);
+void t_o_gerar_Operacoes();
+o* t_o_inserir_nova_Operacao(o** h, o* op);
+o* t_o_remover_operacao(o* h, int id);
 void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f);
-void imprimirMaquinas(m_t* head);
-m_t* iniciarListaAPartirDeFicheiros();
-int lerNumeroDeMaquinas();
-bool gravarEmFicheiro(m_t* h);
-short t_detQTD_Min_de_Tempo(m_t* h);
-short t_detQTD_Max_de_Tempo(m_t* h);
-short t_detQTD_Med_de_Tempo(m_t* h);
+
+#pragma endregion
+
+#pragma region Funcoes
+
+short t_f_Max_de_Tempo(m* h);
+short t_f_Min_de_Tempo(m* h);
+short t_f_Med_de_Tempo(m* h);
 
 #pragma endregion

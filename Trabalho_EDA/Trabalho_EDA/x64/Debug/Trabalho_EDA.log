@@ -1,15 +1,8 @@
-﻿  T_Debug.c
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Debug.c(26,33): warning C4047: 'return': 'int' difere em níveis de indireção de 'char [21]'
-  T_Funcoes.c
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(60,27): warning C4267: 'função': conversão de 'size_t' para 'int', possível perda de dados
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(130,28): warning C4047: 'return': 'short' difere em níveis de indireção de 'void *'
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(145,28): warning C4047: 'return': 'short' difere em níveis de indireção de 'void *'
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(161,28): warning C4047: 'return': 'short' difere em níveis de indireção de 'void *'
-  T_Main.c
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(19,7): warning C4101: 'gravouLista': variável local não referenciada
-  T_Metodos.c
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Metodos.c(55,5): warning C4101: 'otemp': variável local não referenciada
-  Gerando Código...
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(35): warning C4716: 'CriaOperacao': deve retornar um valor
-  LINK : C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Trabalho_EDA.exe não encontrado ou não compilado pelo o último link incremental; executando link completo
-  Trabalho_EDA.vcxproj -> C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Trabalho_EDA.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(510,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Trabalho_EDA.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  T_Operacoes.c
+C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(43,38): warning C4047: 'function': 'o *' differs in levels of indirection from 'int'
+C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(43,37): warning C4024: 't_o_inserir_nova_Operacao': different types for formal and actual parameter 2
+C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(41,5): warning C4101: 'otemp': unreferenced local variable
+C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(88,38): warning C4047: 'function': 'o *' differs in levels of indirection from 'o **'
+C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(88,37): warning C4024: 't_o_procurar_Operacao': different types for formal and actual parameter 1
+  Trabalho_EDA.vcxproj -> C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Fase_1.exe
