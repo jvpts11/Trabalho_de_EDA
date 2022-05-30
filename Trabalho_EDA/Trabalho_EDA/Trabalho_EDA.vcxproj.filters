@@ -24,7 +24,13 @@
     <ClCompile Include="T_Funcoes.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="T_Debug.c">
+    <ClCompile Include="T_Maquinas.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="T_Jobs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="T_Operacoes.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
