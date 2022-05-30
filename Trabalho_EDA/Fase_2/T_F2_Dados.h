@@ -13,13 +13,18 @@
 
 #pragma region Estruturas
 
-struct ProcessPlan {
-
-};
-
-typedef struct ProcessPlan p;
+typedef struct ListaGenerica {
+	void* dados;
+	struct ListaGenerica *next;
+}g;
 
 #pragma endregion
 
+
+#pragma region Metodos
+
+g* t_F2_Insere_No_Inicio(g* inicio, void* dados);
+
+#pragma endregion
 
 #endif
