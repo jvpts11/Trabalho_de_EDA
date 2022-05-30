@@ -15,6 +15,7 @@ o* t_o_cria_operacao(int id)
 	operacao->number = id;
 	operacao->head = NULL;
 	operacao->nextt;
+
 	return operacao;
 }
 
@@ -84,7 +85,7 @@ void t_o_apaga_operacoes(o** h) {
 //Função que altera uma operação
 void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f)
 {
-	o* alterar = t_o_procurar_Operacao( h, id);
+	o* alterar = t_o_procurar_Operacao(h, id);
 
 	m* novo = t_m_criar_Novo_Bloco(a, b);
 

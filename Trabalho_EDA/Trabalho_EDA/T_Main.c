@@ -1,9 +1,9 @@
 ﻿/**
-* Autor: João Monteiro
-* E-mail: a23469@alunos.ipca.pt
-* Data:14/03/2022
+* @file T_Main.c
+* @author Joao_Tavares
+* @date 14/03/2022
 *
-*Descrição: Ficheiro que invoca todos os métodos dos outros
+* @brief Ficheiro que invoca todos os métodos dos outros
 */
 
 //Bibliotecas nativas de C
@@ -11,22 +11,27 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+//Header Files usados
 #include "IDados.h"
 
-//M�todo main, alterado para dar mais legibilidade, contém um menu para teste e utilização do programa
+/**
+* @brief metodo main
+*/
 int main()
 {
-	bool gravouLista; //Verificar e realizar a gravação de uma lista
-	short media; // Variável para receber a média
-	m_t* l = iniciarListaAPartirDeFicheiros(); // Inicialização da lista a partir de um ficheiro de texto
-	imprimirMaquinas(l); // Vizualização da lista
-	media = t_detQTD_Med_de_Tempo(l); //determinar a quantidade média do tempo
-	printf("%d - media", media); // Vizualização da média do tempo
-	gravouLista = gravarEmFicheiro(l); // Realizar a gravação em ficheiro
-	if (gravouLista == true) {
-		printf("Lista gravada com sucesso");
+	j* headj = t_j_Cria_Job(1);
+	j* job2 = t_j_Cria_Job(2);
+	j* job3 = t_j_Cria_Job(3);
+
+	job2 = t_j_Inserir_Novo_Job(&headj, job2);
+	job3 = t_j_Inserir_Novo_Job(&headj, job3);
+
+	j* aux;
+	aux = headj;
+	while (aux != NULL)
+	{
+		printf("%d\n", aux->numero);
+		aux = aux->next;
 	}
-	else {
-		printf("Não foi possível gravar a lista");
-	}
+	return 0;
 }
