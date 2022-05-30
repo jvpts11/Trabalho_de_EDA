@@ -34,7 +34,12 @@ void t_m_imprimir_maquinas(m* head) {
 }
 
 void t_j_imprimirjobs(j* head) {
-
+	j* temp = head;
+	while (temp != NULL) {
+		printf("Job ID - %d",temp->numero);
+		temp = temp->next;
+	}
+	printf("\n");
 }
 
 

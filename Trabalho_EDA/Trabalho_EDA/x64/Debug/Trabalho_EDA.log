@@ -1,22 +1,6 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Trabalho_EDA.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  T_Funcoes.c
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(24,28): warning C4047: 'return': 'short' differs in levels of indirection from 'void *'
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(45,28): warning C4047: 'return': 'short' differs in levels of indirection from 'void *'
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Funcoes.c(67,28): warning C4047: 'return': 'short' differs in levels of indirection from 'void *'
-  T_Jobs.c
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Jobs.c(31,29): warning C4133: '=': incompatible types - from 'o *' to 'Jobs *'
   T_Main.c
-  T_Maquinas.c
-  T_Metodos.c
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Metodos.c(80,33): warning C4047: 'function': 'int' differs in levels of indirection from 'j *'
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Metodos.c(80,30): warning C4024: 't_o_cria_operacao': different types for formal and actual parameter 2
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Metodos.c(80,34): warning C4020: 't_o_cria_operacao': too many actual parameters
-  T_Operacoes.c
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(44,38): warning C4047: 'function': 'o *' differs in levels of indirection from 'int'
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(44,37): warning C4024: 't_o_inserir_nova_Operacao': different types for formal and actual parameter 2
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(42,5): warning C4101: 'otemp': unreferenced local variable
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(89,39): warning C4047: 'function': 'o *' differs in levels of indirection from 'o **'
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(89,38): warning C4024: 't_o_procurar_Operacao': different types for formal and actual parameter 1
-  Generating Code...
-C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Metodos.c(102): warning C4716: 't_j_gerar_jobs_a_partir_de_ficheiros_de_texto': must return a value
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(26,50): warning C4047: 'function': 'm **' differs in levels of indirection from 'm *'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(26,39): warning C4024: 't_m_inserir_novo_Bloco': different types for formal and actual parameter 1
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(22,5): warning C4101: 'jobs': unreferenced local variable
   Trabalho_EDA.vcxproj -> C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Fase_1.exe
