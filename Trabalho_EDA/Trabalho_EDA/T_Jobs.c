@@ -23,13 +23,12 @@
 * 
 * @return um job que pode ser ligado com uma lista de operações e outro job
 */
-j* t_j_Cria_Job(int jobNumber,o* opHead)
+j* t_j_Cria_Job(int jobNumber)
 {
-	if (opHead == NULL) return NULL;
 	j* jobNovo = malloc(sizeof(j));
 	jobNovo->numero = jobNumber;
-	jobNovo->operation = opHead;
-	jobNovo->next;
+	jobNovo->operation = NULL;
+	jobNovo->next = NULL;
 	return jobNovo;
 }
 

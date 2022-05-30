@@ -9,14 +9,12 @@
 #include "IDados.h"
 
 //Função que cria uma operação
-o* t_o_cria_operacao(m* h, int id)
+o* t_o_cria_operacao(int id)
 {
-	if (h == NULL) return NULL;
 	o* operacao = malloc(sizeof(o));
 	operacao->number = id;
-	operacao->head = h;
+	operacao->head = NULL;
 	operacao->nextt;
-
 	return operacao;
 }
 

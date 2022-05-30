@@ -72,7 +72,7 @@ void t_m_apagar_Maquinas(m** h);
 
 #pragma region Jobs
 
-j* t_j_Cria_Job(int jobNumber, o* opHead);
+j* t_j_Cria_Job(int jobNumber);
 j* t_j_Inserir_Novo_Job(j** head, j* job);
 j* t_j_remove_Job(j* h, int jobNumber);
 j* t_j_procurar_Job(j* job, int jobNumber);
@@ -82,7 +82,7 @@ void t_j_apaga_Jobs(j** h);
 
 #pragma region Operacoes
 
-o* t_o_cria_operacao(m* h, int id);
+o* t_o_cria_operacao(int id);
 o* t_o_procurar_Operacao(o* h, int id);
 void t_o_gerar_Operacoes();
 o* t_o_inserir_nova_Operacao(o** h, o* op);
