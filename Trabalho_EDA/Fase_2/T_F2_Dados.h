@@ -10,7 +10,6 @@
 
 #ifndef DATA
 #define DATA
-#define HASHMAX 7 //tamanho máximo da hash table
 
 #pragma region Estruturas
 
@@ -22,14 +21,5 @@ struct ListaGenerica {
 typedef struct ListaGenerica g;
 #pragma endregion
 
-#pragma region Hash
-
-typedef struct Hash {
-
-}Hash;
-
-
-
-#pragma endregion
 
 #endif
