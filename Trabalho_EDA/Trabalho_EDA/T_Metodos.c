@@ -20,7 +20,6 @@
 *
 * @param head - início da lista de máquinas
 */
-
 void t_m_imprimir_maquinas(m* head) {
 	m* temp = head;
 
@@ -48,7 +47,6 @@ void t_j_imprimirjobs(j* head) {
 *
 * @return lista de máquians gerada a partir de um ficheiro
 */
-
 m* t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto(FILE* fpm, char nome_do_arquivo[20]) {
 	m* next = NULL;
 	m* temp = NULL;

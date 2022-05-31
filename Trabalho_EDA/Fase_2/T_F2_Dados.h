@@ -9,18 +9,27 @@
 
 
 #ifndef DATA
-
+#define DATA
+#define HASHMAX 7 //tamanho máximo da hash table
 
 #pragma region Estruturas
 
-struct ProcessPlan {
-
+struct ListaGenerica {
+	void* dados; //Campo que armazena dados genéticos
+	struct ListaGenerica *next;
 };
 
-
-typedef struct ProcessPlan p;
-
+typedef struct ListaGenerica g;
 #pragma endregion
 
+#pragma region Hash
+
+typedef struct Hash {
+
+}Hash;
+
+
+
+#pragma endregion
 
 #endif
