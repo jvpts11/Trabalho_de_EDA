@@ -9,5 +9,4 @@
 #include <stdlib.h>
 
 void main() {
-	//comit massa
 }

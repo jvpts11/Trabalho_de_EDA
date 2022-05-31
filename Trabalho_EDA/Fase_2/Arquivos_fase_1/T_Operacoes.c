@@ -37,7 +37,8 @@ o* t_o_procurar_Operacao(o* h, int id)
 	return found;
 }
 
-void t_o_gerar_Operacoes() {
+bool t_o_gerar_Operacoes() {
+	bool check = false;
 	o* headop = NULL;
 	o* otemp;
 
@@ -48,7 +49,9 @@ void t_o_gerar_Operacoes() {
 	{
 		printf("%d\n", aux->number);
 		aux = aux->nextt;
+		check = true;
 	}
+	return check;
 }
 
 //Função que cria as operações com o número que o utilizador quiser
@@ -74,18 +77,24 @@ o* t_o_remover_operacao(o* h, int id)
 	return h;
 }
 
-void t_o_apaga_operacoes(o** h) {
+bool t_o_apaga_operacoes(o** h) {
+	
+	bool check = false;
 	o* aux;
 	while (*h) {
 		aux = *h;
 		*h = (*h)->nextt;
 		free(aux);
+		check = true;
 	}
+	return check;
 }
 
 //Função que altera uma operação
-void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f)
+bool AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f)
 {
+	bool check = false;
+
 	o* alterar = t_o_procurar_Operacao(h, id);
 
 	m* novo = t_m_criar_Novo_Bloco(a, b);
@@ -96,11 +105,14 @@ void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short 
 	{
 		m* novo2 = t_m_criar_Novo_Bloco(c, d);
 		novo->next = novo2;
+		check = true;
 	}
 	else if (e != 0 && f != 0)
 	{
 		novo2->next = t_m_criar_Novo_Bloco(e, f);
+		check = true;
 	}
 
 	*h = alterar;
+	return check;
 }

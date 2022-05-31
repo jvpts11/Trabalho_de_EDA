@@ -53,7 +53,7 @@ typedef struct Operations o;
 
 #pragma region Metodos
 
-void t_m_imprimir_maquinas(m* head);
+bool t_m_imprimir_maquinas(m* head);
 m* t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto(FILE* fpm, char nome_do_arquivo[20]);
 bool t_m_gravar_dados_em_ficheiro_de_texto(m* h, char nome_do_arquivo[20]);
 
@@ -65,7 +65,7 @@ m* t_m_criar_Novo_Bloco(int machineId, short tempoDeProd);
 m* t_m_inserir_novo_Bloco(m** h, m* maquina);
 m* t_m_procurar_Maquina(m* maquinas, int id);
 m* t_m_remove_Maquina(m* h, int id);
-void t_m_apagar_Maquinas(m** h);
+bool t_m_apagar_Maquinas(m** h);
 
 #pragma endregion
 
@@ -75,7 +75,7 @@ j* t_j_Cria_Job(int jobNumber);
 j* t_j_Inserir_Novo_Job(j** head, j* job);
 j* t_j_remove_Job(j* h, int jobNumber);
 j* t_j_procurar_Job(j* job, int jobNumber);
-void t_j_apaga_Jobs(j** h);
+bool t_j_apaga_Jobs(j** h);
 
 #pragma endregion
 
@@ -83,10 +83,11 @@ void t_j_apaga_Jobs(j** h);
 
 o* t_o_cria_operacao(int id);
 o* t_o_procurar_Operacao(o* h, int id);
-void t_o_gerar_Operacoes();
+bool t_o_apaga_operacoes(o** h);
+bool t_o_gerar_Operacoes();
 o* t_o_inserir_nova_Operacao(o** h, o* op);
 o* t_o_remover_operacao(o* h, int id);
-void AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f);
+bool AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f);
 
 #pragma endregion
 

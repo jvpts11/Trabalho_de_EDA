@@ -20,16 +20,20 @@
 *
 * @param head - início da lista de máquinas
 */
-void t_m_imprimir_maquinas(m* head) {
+bool t_m_imprimir_maquinas(m* head) {
+	
+	bool check = false;
 	m* temp = head;
 
 	while (temp != NULL) {
 		printf("%d-\n", temp->id);
 		printf("%d-\n\n", temp->tempoDeProducao);
 		temp = temp->next;
+		check = true;
 	}
 
 	printf("\n");
+	return check;
 }
 
 void t_j_imprimirjobs(j* head) {

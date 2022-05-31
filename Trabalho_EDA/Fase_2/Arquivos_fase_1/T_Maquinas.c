@@ -97,15 +97,17 @@ m* t_m_remove_Maquina(m* h, int id) {
 *
 * @param h - início da lista de máquinas a ser removida
 */
-void t_m_apagar_Maquinas(m** h) {
+bool t_m_apagar_Maquinas(m** h) {
 
+	bool check = false;
 	m* aux;
 	while (*h) {
 		aux = *h;
 		*h = (*h)->next;
 		free(aux);
+		check = true;
 	}
-
+	return check;
 }
 
 #pragma endregion

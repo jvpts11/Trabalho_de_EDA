@@ -97,11 +97,14 @@ j* t_j_procurar_Job(j* job, int jobNumber) {
 * @param h - lista a ser apagada
 *
 */
-void t_j_apaga_Jobs(j** h) {
+bool t_j_apaga_Jobs(j** h) {
+	bool check = false;
 	j* aux;
 	while (*h) {
 		aux = *h;
 		*h = (*h)->next;
 		free(aux);
+		check = true;
 	}
+	return check;
 }
