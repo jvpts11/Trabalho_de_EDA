@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "Arquivos_fase_1/IDados.h"
+
 
 #ifndef DATA
 #define DATA
@@ -31,5 +33,13 @@ typedef struct Planeamento p;
 typedef struct ListaGenerica g;
 #pragma endregion
 
+
+#pragma region MetodosListasGenericas
+
+g* t_F2_g_criar_bloco(g* lista, void* data);
+
+g* t_F2_g_inserir_bloco(g** head, g* lista_a_ser_ligada);
+
+#pragma endregion
 
 #endif
