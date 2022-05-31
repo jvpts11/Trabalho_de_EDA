@@ -4,13 +4,28 @@ C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c
 C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(27,30): warning C4024: 't_j_Inserir_Novo_Job': tipos diferentes para parâmetro formal e real 1
 C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(28,36): warning C4047: 'função': 'j **' difere em níveis de indireção de 'j ***'
 C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(28,30): warning C4024: 't_j_Inserir_Novo_Job': tipos diferentes para parâmetro formal e real 1
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(46,25): warning C4133: '=': tipos incompatíveis - de 'o *' para 'Jobs *'
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(47,25): warning C4133: '=': tipos incompatíveis - de 'o *' para 'Jobs *'
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(48,25): warning C4133: '=': tipos incompatíveis - de 'o *' para 'Jobs *'
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(52,13): warning C4047: '=': 'j *' difere em níveis de indireção de 'j **'
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(54,45): warning C4133: 'função': tipos incompatíveis - de 'Jobs *' para 'o *'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(35,44): warning C4047: 'função': 'o **' difere em níveis de indireção de 'o ***'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(35,36): warning C4024: 't_o_inserir_nova_Operacao': tipos diferentes para parâmetro formal e real 1
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(36,44): warning C4047: 'função': 'o **' difere em níveis de indireção de 'o ***'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(36,36): warning C4024: 't_o_inserir_nova_Operacao': tipos diferentes para parâmetro formal e real 1
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(42,44): warning C4047: 'função': 'o **' difere em níveis de indireção de 'o ***'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(42,36): warning C4024: 't_o_inserir_nova_Operacao': tipos diferentes para parâmetro formal e real 1
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(51,44): warning C4047: 'função': 'o **' difere em níveis de indireção de 'o ***'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(51,36): warning C4024: 't_o_inserir_nova_Operacao': tipos diferentes para parâmetro formal e real 1
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(52,44): warning C4047: 'função': 'o **' difere em níveis de indireção de 'o ***'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(52,36): warning C4024: 't_o_inserir_nova_Operacao': tipos diferentes para parâmetro formal e real 1
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(53,44): warning C4047: 'função': 'o **' difere em níveis de indireção de 'o ***'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(53,36): warning C4024: 't_o_inserir_nova_Operacao': tipos diferentes para parâmetro formal e real 1
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(54,44): warning C4047: 'função': 'o **' difere em níveis de indireção de 'o ***'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(54,36): warning C4024: 't_o_inserir_nova_Operacao': tipos diferentes para parâmetro formal e real 1
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(56,25): warning C4133: '=': tipos incompatíveis - de 'o *' para 'Jobs *'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(57,25): warning C4133: '=': tipos incompatíveis - de 'o *' para 'Jobs *'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(58,25): warning C4133: '=': tipos incompatíveis - de 'o *' para 'Jobs *'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(62,13): warning C4047: '=': 'j *' difere em níveis de indireção de 'j **'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(64,38): warning C4047: 'função': 'o *' difere em níveis de indireção de 'o **'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(64,31): warning C4024: 't_o_procurar_Operacao': tipos diferentes para parâmetro formal e real 1
 C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(25,1): warning C4047: 'inicializando': 'j **' difere em níveis de indireção de 'j *'
 C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(33,1): warning C4047: 'inicializando': 'o **' difere em níveis de indireção de 'o *'
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(37,1): warning C4047: 'inicializando': 'o **' difere em níveis de indireção de 'o *'
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(44,1): warning C4047: 'inicializando': 'o **' difere em níveis de indireção de 'o *'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(40,1): warning C4047: 'inicializando': 'o **' difere em níveis de indireção de 'o *'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(49,1): warning C4047: 'inicializando': 'o **' difere em níveis de indireção de 'o *'
   Trabalho_EDA.vcxproj -> C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Fase_1.exe

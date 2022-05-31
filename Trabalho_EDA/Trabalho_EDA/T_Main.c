@@ -32,16 +32,26 @@ int main()
 	o* op1_3 = t_o_cria_operacao(3);
 	o** headop1 = op1_1;
 
+	op1_2 = t_o_inserir_nova_Operacao(&headop1, op1_2);
+	op1_3 = t_o_inserir_nova_Operacao(&headop1, op1_3);
+
 	o* op2_1 = t_o_cria_operacao(1);
 	o* op2_2 = t_o_cria_operacao(2);
 	o** headop2 = op2_1;
 
+	op2_2 = t_o_inserir_nova_Operacao(&headop2, op2_1);
+
 	o* op3_1 = t_o_cria_operacao(1);
 	o* op3_2 = t_o_cria_operacao(2);
 	o* op3_3 = t_o_cria_operacao(3);
-	o* op4_3 = t_o_cria_operacao(4);
-	o* op5_3 = t_o_cria_operacao(5);
+	o* op3_4 = t_o_cria_operacao(4);
+	o* op3_5 = t_o_cria_operacao(5);
 	o** headop3 = op3_1;
+
+	op3_2 = t_o_inserir_nova_Operacao(&headop3, op3_2);
+	op3_3 = t_o_inserir_nova_Operacao(&headop3, op3_3);
+	op3_4 = t_o_inserir_nova_Operacao(&headop3, op3_4);
+	op3_5 = t_o_inserir_nova_Operacao(&headop3, op3_5);
 
 	job1->operation = op1_1;
 	job2->operation = op2_1;
@@ -51,7 +61,7 @@ int main()
 	j* aux;
 	aux = headj;
 	o* auxx;
-	auxx = t_o_procurar_Operacao(aux->operation, 1);
+	auxx = t_o_procurar_Operacao(headop1, 1);
 	while (aux != NULL)
 	{
 		if (aux->numero == 1)
