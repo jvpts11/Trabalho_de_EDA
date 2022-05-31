@@ -1,8 +1,24 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(510,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Trabalho_EDA.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  T_Operacoes.c
-C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(43,38): warning C4047: 'function': 'o *' differs in levels of indirection from 'int'
-C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(43,37): warning C4024: 't_o_inserir_nova_Operacao': different types for formal and actual parameter 2
-C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(41,5): warning C4101: 'otemp': unreferenced local variable
-C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(88,38): warning C4047: 'function': 'o *' differs in levels of indirection from 'o **'
-C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Operacoes.c(88,37): warning C4024: 't_o_procurar_Operacao': different types for formal and actual parameter 1
-  Trabalho_EDA.vcxproj -> C:\Users\elisa\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Fase_1.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Trabalho_EDA.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  T_Main.c
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(27,36): warning C4047: 'function': 'j **' differs in levels of indirection from 'j ***'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(27,30): warning C4024: 't_j_Inserir_Novo_Job': different types for formal and actual parameter 1
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(28,36): warning C4047: 'function': 'j **' differs in levels of indirection from 'j ***'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(28,30): warning C4024: 't_j_Inserir_Novo_Job': different types for formal and actual parameter 1
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(48,44): warning C4047: 'function': 'o **' differs in levels of indirection from 'o ***'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(48,36): warning C4024: 't_o_inserir_nova_Operacao': different types for formal and actual parameter 1
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(57,44): warning C4047: 'function': 'o **' differs in levels of indirection from 'o ***'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(57,36): warning C4024: 't_o_inserir_nova_Operacao': different types for formal and actual parameter 1
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(58,44): warning C4047: 'function': 'o **' differs in levels of indirection from 'o ***'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(58,36): warning C4024: 't_o_inserir_nova_Operacao': different types for formal and actual parameter 1
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(59,44): warning C4047: 'function': 'o **' differs in levels of indirection from 'o ***'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(59,36): warning C4024: 't_o_inserir_nova_Operacao': different types for formal and actual parameter 1
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(60,44): warning C4047: 'function': 'o **' differs in levels of indirection from 'o ***'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(60,36): warning C4024: 't_o_inserir_nova_Operacao': different types for formal and actual parameter 1
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(62,25): warning C4133: '=': incompatible types - from 'o *' to 'Jobs *'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(63,25): warning C4133: '=': incompatible types - from 'o *' to 'Jobs *'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(64,25): warning C4133: '=': incompatible types - from 'o *' to 'Jobs *'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(68,13): warning C4047: '=': 'j *' differs in levels of indirection from 'j **'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(25,1): warning C4047: 'initializing': 'j **' differs in levels of indirection from 'j *'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(46,1): warning C4047: 'initializing': 'o **' differs in levels of indirection from 'o *'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Trabalho_EDA\T_Main.c(55,1): warning C4047: 'initializing': 'o **' differs in levels of indirection from 'o *'
+  Trabalho_EDA.vcxproj -> C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Fase_1.exe

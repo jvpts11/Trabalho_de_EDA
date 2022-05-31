@@ -9,17 +9,16 @@
 
 
 #ifndef DATA
-
+#define DATA
 
 #pragma region Estruturas
 
-struct ProcessPlan {
-
+struct ListaGenerica {
+	void* dados; //Campo que armazena dados genéticos
+	struct ListaGenerica *next;
 };
 
-
-typedef struct ProcessPlan p;
-
+typedef struct ListaGenerica g;
 #pragma endregion
 
 
