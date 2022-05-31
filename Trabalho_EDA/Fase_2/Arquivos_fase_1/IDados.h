@@ -55,6 +55,8 @@ typedef struct Operations o;
 
 bool t_m_imprimir_maquinas(m* head);
 m* t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto(FILE* fpm, char nome_do_arquivo[20]);
+o* t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto(FILE* fpo, char nome_do_arquivo[20]);
+j* t_j_gerar_jobs_a_partir_de_ficheiros_de_texto(FILE* fpj, char nome_do_arquivo[20]);
 bool t_m_gravar_dados_em_ficheiro_de_texto(m* h, char nome_do_arquivo[20]);
 
 #pragma endregion

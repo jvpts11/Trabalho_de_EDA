@@ -36,11 +36,6 @@ bool t_m_imprimir_maquinas(m* head) {
 	return check;
 }
 
-void t_j_imprimirjobs(j* head) {
-
-}
-
-
 #pragma endregion
 
 #pragma region Manipulacao_de_Ficheiros
@@ -71,7 +66,10 @@ m* t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto(FILE* fpm, char nome_do_arq
 	return temp;
 }
 
-o* t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto(m* h, j* job, FILE* fpo, char nome_do_arquivo[20]) {
+/**
+* @brief Função que gera operações a partir de ficheiros de texto
+*/
+o* t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto(FILE* fpo, char nome_do_arquivo[20]) {
 	o* next = NULL;
 	o* temp = NULL;
 
@@ -79,7 +77,7 @@ o* t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto(m* h, j* job, FILE* fpo, c
 	int id = 0;
 
 	while (fscanf(fpo, "%d", &id) != EOF) {
-		temp = t_o_cria_operacao(h, job, id);
+		temp = t_o_cria_operacao(id);
 		t_o_inserir_nova_Operacao(&next, temp);
 	}
 
@@ -88,19 +86,26 @@ o* t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto(m* h, j* job, FILE* fpo, c
 	return temp;
 }
 
+/**
+* Função que gera jobs a partir de ficheiros de text
+* 
+* @param fpj - file pointer para jobs
+* 
+* @param nome_do_arquivo - nome do arquivo a ser aberto
+*/
 j* t_j_gerar_jobs_a_partir_de_ficheiros_de_texto(FILE* fpj, char nome_do_arquivo[20]) {
 	j* next = NULL;
 	j* temp = NULL;
 
 	fpj = fopen(nome_do_arquivo, "r");
 	int Jid = 0;
-	int Oid = 0;
-	int Mid = 0;
-	short Mtime = 0;
 
-	while (fscanf(fpj, "%d,%d,%d,%hi\n", &Jid, &Oid, &Mid, &Mtime) != EOF) {
-
+	while (fscanf(fpj, "%d\n", &Jid) != EOF) {
+		temp = t_j_Cria_Job(Jid);
+		t_j_Inserir_Novo_Job(&next,temp);
 	}
+
+	return temp;
 }
 
 /**
