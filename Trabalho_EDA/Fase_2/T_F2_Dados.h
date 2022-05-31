@@ -7,23 +7,26 @@
 
 #pragma once
 
-#include "Arquivos_fase_1/IDados.h"
-
-
 #ifndef DATA
 #define DATA
 
-#define J 7
-#define O 38
+#define M 9
+#define T 75
 #define MAXFILENAME 40
 
 #pragma region Estruturas
 
+/**
+* @brief Estrutura para representar um bloco de uma lista genérica
+*/
 struct ListaGenerica {
 	void* dados; //Campo que armazena dados genéticos
 	struct ListaGenerica *next;
 };
 
+/**
+* @brief Estrutura para representar um planeamento de jobs e operações
+*/
 struct Planeamento {
 	int job;
 	int op;
