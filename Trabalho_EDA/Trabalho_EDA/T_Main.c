@@ -38,6 +38,7 @@ int main()
 	o* op1_3 = t_o_cria_operacao(3);
 	o** headop1 = op1_1;
 
+
 	op1_2 = t_o_inserir_nova_Operacao(&headop1, op1_2);
 	op1_3 = t_o_inserir_nova_Operacao(&headop1, op1_3);
 

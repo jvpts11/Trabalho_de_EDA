@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Arquivos fase 1">
+      <UniqueIdentifier>{280408fa-20f4-45e4-bec2-d1731c47c226}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="T_F2_Main.c">
@@ -21,10 +24,31 @@
     <ClCompile Include="T_F2_Manipulacao.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Arquivos_fase_1\T_Operacoes.c">
+      <Filter>Arquivos fase 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Arquivos_fase_1\T_Metodos.c">
+      <Filter>Arquivos fase 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Arquivos_fase_1\T_Maquinas.c">
+      <Filter>Arquivos fase 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Arquivos_fase_1\T_Jobs.c">
+      <Filter>Arquivos fase 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Arquivos_fase_1\T_Funcoes.c">
+      <Filter>Arquivos fase 1</Filter>
+    </ClCompile>
+    <ClCompile Include="T_F2_Ficheiros.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="T_F2_Dados.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Arquivos_fase_1\IDados.h">
+      <Filter>Arquivos fase 1</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

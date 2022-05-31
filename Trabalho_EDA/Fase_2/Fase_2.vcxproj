@@ -19,10 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Arquivos_fase_1\T_Funcoes.c" />
+    <ClCompile Include="Arquivos_fase_1\T_Jobs.c" />
+    <ClCompile Include="Arquivos_fase_1\T_Maquinas.c" />
+    <ClCompile Include="Arquivos_fase_1\T_Metodos.c" />
+    <ClCompile Include="Arquivos_fase_1\T_Operacoes.c" />
+    <ClCompile Include="T_F2_Ficheiros.c" />
     <ClCompile Include="T_F2_Main.c" />
     <ClCompile Include="T_F2_Manipulacao.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arquivos_fase_1\IDados.h" />
     <ClInclude Include="T_F2_Dados.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
