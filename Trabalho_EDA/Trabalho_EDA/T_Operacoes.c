@@ -24,7 +24,8 @@ o* t_o_procurar_Operacao(o* h, int id)
 {
 	if (h == NULL)return NULL;
 	o* found = NULL;
-	o* aux = h;
+	o* aux = NULL;
+	aux = h;
 	while (aux)
 	{
 		if (aux->number == id)
