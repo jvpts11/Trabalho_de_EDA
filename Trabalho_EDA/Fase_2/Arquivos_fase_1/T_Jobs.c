@@ -120,8 +120,14 @@ j* t_j_procurar_Job(j* job, int jobNumber) {
 	aux = job;
 
 	while (aux != NULL) {
-		if (aux->numero == jobNumber) {
+		if (aux->numero == jobNumber) 
+		{
 			aux->numero = jobNumber;
+			return aux;
+		}
+		else
+		{
+			aux = aux->next;
 		}
 	}
 	return aux;

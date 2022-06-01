@@ -21,19 +21,22 @@ o* t_o_cria_operacao(int id)
 //Função que procura uma operação
 o* t_o_procurar_Operacao(o* h, int id)
 {
-	if (h == NULL)return NULL;
-	o* found = NULL;
+	if (h == NULL) return NULL;
 	o* aux = NULL;
 	aux = h;
-	while (aux)
-	{
+
+	while (aux != NULL) {
 		if (aux->number == id)
 		{
-			found = aux;
+			aux->number = id;
+			return aux;
 		}
-		aux = aux->nextt;
+		else
+		{
+			aux = aux->nextt;
+		}
 	}
-	return found;
+	return aux;
 }
 
 bool t_o_gerar_Operacoes() {
