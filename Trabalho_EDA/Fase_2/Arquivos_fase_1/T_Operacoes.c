@@ -8,7 +8,15 @@
 
 #include "IDados.h"
 
-//Função que cria uma operação
+#pragma region Manipulacao_de_Operacoes
+
+/**
+* @brief Função que cria uma operação
+* 
+* @param id - id da operação a ser criada
+* 
+* @return uma operação
+*/
 o* t_o_cria_operacao(int id)
 {
 	o* operacao = malloc(sizeof(o));
@@ -18,7 +26,15 @@ o* t_o_cria_operacao(int id)
 	return operacao;
 }
 
-//Função que procura uma operação
+/**
+* @brief Função que procura uma operação em uma lista de operações
+* 
+* @param h - lista com a operação que deverá ser encontrada
+* 
+* @param id - id da operação a ser procurada
+* 
+* @return operação encontrada
+*/
 o* t_o_procurar_Operacao(o* h, int id)
 {
 	if (h == NULL)return NULL;
@@ -36,6 +52,11 @@ o* t_o_procurar_Operacao(o* h, int id)
 	return found;
 }
 
+/**
+* @brief Método que gera uma lista de operações automaticamente, somente usado para testes
+* 
+* @return true se conseguiu gerar, false se não conseguiu
+*/
 bool t_o_gerar_Operacoes() {
 	bool check = false;
 	o* headop = NULL;
@@ -53,7 +74,15 @@ bool t_o_gerar_Operacoes() {
 	return check;
 }
 
-//Função que cria as operações com o número que o utilizador quiser
+/**
+* @brief Função que insere uma operação em uma lista existente
+* 
+* @param h - lista que receberá a operação
+* 
+* @param op - operação que será inserida na lista
+* 
+* @return lista com a operação inserida
+*/
 o* t_o_inserir_nova_Operacao(o** h, o* op)
 {
 	if (h == NULL || op == NULL) return NULL;
@@ -62,7 +91,16 @@ o* t_o_inserir_nova_Operacao(o** h, o* op)
 	return op;
 }
 
-//Função que remove a operação que o utilizador escolher, recebe um apontador para uma operação e seu id
+
+/**
+* @brief Função que remove uma operação em uma lista de operações
+* 
+* @param h - Lista existente com a operação a ser removida
+* 
+* @param id - id da operação a ser removida
+* 
+* @return Lista sem a operação desejada
+*/
 o* t_o_remover_operacao(o* h, int id)
 {
 	if (h == NULL) return NULL;
@@ -97,9 +135,22 @@ o* t_o_remover_operacao(o* h, int id)
 	}
 }
 
+/**
+* @brief Função que insere uma lista de máquinas em uma operação
+* 
+* @param operacao - lista de operações que receberá a lista de máquinas
+* 
+* @param operationId - id da operação que receberá a operação
+* 
+* @param maquinas - lista de máquinas que será ligada com a operação em questão
+* 
+* @return operação com a lista de máquinas inserida
+*/
 o* t_o_inserir_maquina_na_operacao(o* operacao,int operationId, m* maquinas) {
 	o* temp = NULL;
 	o* aux = NULL;
+
+	if (operacao || maquinas == NULL) return;
 
 	aux = operacao;
 
@@ -112,6 +163,9 @@ o* t_o_inserir_maquina_na_operacao(o* operacao,int operationId, m* maquinas) {
 	temp->head = t_m_inserir_novo_bloco2(temp->head,maquinas);
 }
 
+/**
+* @brief função booleana que apaga uma lista inteira de operações
+*/
 bool t_o_apaga_operacoes(o** h) {
 	
 	bool check = false;
@@ -125,7 +179,9 @@ bool t_o_apaga_operacoes(o** h) {
 	return check;
 }
 
-//Função que altera uma operação
+/**
+* @brief Função que altera uma operação, usada somente para testes, não deve ser usada
+*/
 bool AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f)
 {
 	bool check = false;
@@ -151,3 +207,5 @@ bool AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short 
 	*h = alterar;
 	return check;
 }
+
+#pragma endregion
