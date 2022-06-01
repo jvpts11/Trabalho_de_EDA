@@ -13,10 +13,11 @@
 
 void main() 
 {
-	j* hj = t_j_Cria_Job(1);
+	j* job1 = t_j_Cria_Job(1);
 	j* job2 = t_j_Cria_Job(2);
 	j* job3 = t_j_Cria_Job(3);
 	j* job4 = t_j_Cria_Job(4);
+	j** hj = job1;
 
 	//job1 = t_j_Inserir_Novo_Job(hj, job1);
 	job2 = t_j_Inserir_Novo_Job(&hj, job2);
@@ -37,11 +38,13 @@ void main()
 	ope3 = t_o_inserir_nova_Operacao(&ho_1, ope3);
 	
 
-	o* auxx;
-	auxx = ho_1;
+	j* auxx;
+	auxx = hj;
 	//auxx = t_o_procurar_Operacao(ho_1, 1);
 
-	auxx = t_o_remover_operacao(ho_1, 3);
+	//auxx = t_o_remover_operacao(ho_1, 2);
+
+	auxx = t_j_remove_Job(hj, 1);
 
 	/*
 	aux = hj;
@@ -55,7 +58,7 @@ void main()
 
 	while (auxx != NULL)
 	{
-		printf("%d\n", auxx->number);
-		auxx = auxx->nextt;
+		printf("%d\n", auxx->numero);
+		auxx = auxx->next;
 	}
 }

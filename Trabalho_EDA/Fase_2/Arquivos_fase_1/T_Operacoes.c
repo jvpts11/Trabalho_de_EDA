@@ -97,7 +97,7 @@ o* t_o_remover_operacao(o* h, int id)
 	}
 }
 
-void t_o_inserir_maquina_na_operacao(o* operacao,int operationId, m* maquinas) {
+o* t_o_inserir_maquina_na_operacao(o* operacao,int operationId, m* maquinas) {
 	o* temp = NULL;
 	o* aux = NULL;
 

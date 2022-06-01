@@ -94,7 +94,7 @@ bool t_o_apaga_operacoes(o** h);
 bool t_o_gerar_Operacoes();
 o* t_o_inserir_nova_Operacao(o** h, o* op);
 o* t_o_remover_operacao(o* h, int id);
-void t_o_inserir_maquina_na_operacao(o* operacao, int operationId, m* maquinas);
+o* t_o_inserir_maquina_na_operacao(o* operacao, int operationId, m* maquinas);
 bool AlteraOperacao(o** h, int id, int a, short b, int c, short d, int e, short f);
 
 #pragma endregion

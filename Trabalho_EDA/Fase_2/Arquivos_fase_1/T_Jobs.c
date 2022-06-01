@@ -61,10 +61,32 @@ j* t_j_Inserir_Novo_Job(j** head, j* job)
 j* t_j_remove_Job(j* h, int jobNumber) {
 	if (h == NULL) return NULL;
 
+	j* auxx = h->next;
+	j* antauxx = h;
+	j* depauxx = h->next->next;
+
 	if (h->numero == jobNumber) {
 		j* aux = h;
 		h = h->next;
 		free(aux);
+	}
+	else
+	{
+		while (auxx)
+		{
+			if (auxx->numero == jobNumber)
+			{
+				antauxx->next = depauxx;
+				free(auxx);
+				return h;
+			}
+			else
+			{
+				antauxx = antauxx->next;
+				auxx = auxx->next;
+				depauxx = depauxx->next;
+			}
+		}
 	}
 	return h;
 }
