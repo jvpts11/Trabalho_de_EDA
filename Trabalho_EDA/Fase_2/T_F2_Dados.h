@@ -8,6 +8,7 @@
 #pragma once
 
 #include <stdbool.h>
+#include "Arquivos_fase_1/IDados.h"
 
 #ifndef DATA
 
