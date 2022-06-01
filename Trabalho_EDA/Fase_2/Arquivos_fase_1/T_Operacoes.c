@@ -67,13 +67,34 @@ o* t_o_remover_operacao(o* h, int id)
 {
 	if (h == NULL) return NULL;
 
+	o* auxx = h->nextt;
+	o* antauxx = h;
+	o* depauxx = h->nextt->nextt;
+
 	if (h->number == id) {
 		o* aux = h;
 		h = h->nextt;
 		free(aux);
+		return h;
 	}
-
-	return h;
+	else
+	{
+		while (auxx)
+		{
+			if (auxx->number == id)
+			{
+				antauxx->nextt = depauxx;
+				free(auxx);
+				return h;
+			}
+			else
+			{
+				antauxx = antauxx->nextt;
+				auxx = auxx->nextt;
+				depauxx = depauxx->nextt;
+			}
+		}
+	}
 }
 
 bool t_o_apaga_operacoes(o** h) {

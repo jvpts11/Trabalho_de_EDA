@@ -1,2 +1,8 @@
-﻿  T_F2_Main.c
+﻿  T_Operacoes.c
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Fase_2\Arquivos_fase_1\T_Operacoes.c(44,38): warning C4047: 'função': 'o *' difere em níveis de indireção de 'int'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Fase_2\Arquivos_fase_1\T_Operacoes.c(44,37): warning C4024: 't_o_inserir_nova_Operacao': tipos diferentes para parâmetro formal e real 2
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Fase_2\Arquivos_fase_1\T_Operacoes.c(42,5): warning C4101: 'otemp': variável local não referenciada
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Fase_2\Arquivos_fase_1\T_Operacoes.c(118,38): warning C4047: 'função': 'o *' difere em níveis de indireção de 'o **'
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Fase_2\Arquivos_fase_1\T_Operacoes.c(118,37): warning C4024: 't_o_procurar_Operacao': tipos diferentes para parâmetro formal e real 1
+C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Fase_2\Arquivos_fase_1\T_Operacoes.c(98): warning C4715: 't_o_remover_operacao': nem todos os caminhos de controle retornam um valor
   Fase_2.vcxproj -> C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Fase_2.exe

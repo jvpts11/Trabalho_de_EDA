@@ -28,19 +28,20 @@ void main()
 	//j* aux = t_j_procurar_Job(hj, 2);
 	//printf("%d", aux->numero);
 
-	o* ho_1 = t_o_cria_operacao(1);
+	o* ope1 = t_o_cria_operacao(1);
 	o* ope2 = t_o_cria_operacao(2);
 	o* ope3 = t_o_cria_operacao(3);
+	o** ho_1 = ope1;
 
 	ope2 = t_o_inserir_nova_Operacao(&ho_1, ope2);
 	ope3 = t_o_inserir_nova_Operacao(&ho_1, ope3);
 	
 
 	o* auxx;
+	auxx = ho_1;
 	//auxx = t_o_procurar_Operacao(ho_1, 1);
 
-	ho_1 = t_o_remover_operacao(ho_1, 3);
-	auxx = ho_1;
+	auxx = t_o_remover_operacao(ho_1, 3);
 
 	/*
 	aux = hj;
