@@ -1,5 +1,5 @@
 /**
-* @file T_F2_Manipulacao.c
+* @file T_F2_Planeamento.c
 * @author Joao_Tavares
 * @brief Source file que contém funções para ficheiros
 * @date May 2022
@@ -7,18 +7,18 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #include "T_F2_Dados.h"
 #include "Arquivos_fase_1/IDados.h"
 
-
-/**
-* @brief Função que abre um plano de operações e jobs
-* 
-* @param arquivo - nome do arquivo a ser aberto
-*/
-void t_F2_abrir_plano(char arquivo[MAXFILENAME]) {
-	FILE* fp;
+bool t_F2_iniciar_planeamento(p planeamento[][T], int jobId,int opId) {
+	for (int i = 0; i < M;i++) { //notação de matriz ij
+		for (int j = 0;j < T;j++) {
+			planeamento[i][j].jobId = jobId;
+			planeamento[i][j].opId = opId;
+		}
+	}
 }
 
 /**

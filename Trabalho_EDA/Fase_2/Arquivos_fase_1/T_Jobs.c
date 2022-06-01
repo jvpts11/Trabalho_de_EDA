@@ -13,6 +13,7 @@
 
 #include "IDados.h"
 
+#pragma region Criacao_e_manipulacao
 
 /**
 * @brief Função que cria um job
@@ -48,6 +49,19 @@ j* t_j_Inserir_Novo_Job(j** head, j* job)
 	*head = job;
 	return job;
 }
+
+j* t_o_inserir_operacao_no_job(j* lista_de_jobs, o* lista_de_operacoes) {
+
+	j* temp = NULL;
+	j* aux = NULL;
+	o* auxO = lista_de_operacoes;
+
+	aux->operation = lista_de_operacoes;
+
+	return aux;
+}
+
+#pragma endregion
 
 /**
 * @brief Função que remove um job especifico

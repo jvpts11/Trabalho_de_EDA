@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include <stdbool.h>
+
 #ifndef DATA
 #define DATA
 
@@ -28,8 +30,8 @@ struct ListaGenerica {
 * @brief Estrutura para representar um planeamento de jobs e operações
 */
 struct Planeamento {
-	int job;
-	int op;
+	int jobId;
+	int opId;
 };
 
 typedef struct Planeamento p;
@@ -42,6 +44,11 @@ typedef struct ListaGenerica g;
 g* t_F2_g_criar_bloco(g* lista, void* data);
 
 g* t_F2_g_inserir_bloco(g** head, g* lista_a_ser_ligada);
+
+#pragma endregion
+
+#pragma region Planeamento
+bool t_F2_iniciar_planeamento(p planeamento[][T], int jobId, int opId);
 
 #pragma endregion
 

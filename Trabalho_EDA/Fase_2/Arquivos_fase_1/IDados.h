@@ -58,7 +58,7 @@ typedef struct Operations o;
 #pragma region Metodos
 
 bool t_m_imprimir_maquinas(m* head);
-m* t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto(char nome_do_arquivo[20]);
+m* t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto(char nome_do_arquivo[20], o* operacao);
 o* t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto(char nome_do_arquivo[20]);
 j* t_j_gerar_jobs_a_partir_de_ficheiros_de_texto(char nome_do_arquivo[20]);
 bool t_m_gravar_dados_em_ficheiro_de_texto(m* h, char nome_do_arquivo[20]);
@@ -82,6 +82,7 @@ j* t_j_Cria_Job(int jobNumber);
 j* t_j_Inserir_Novo_Job(j** head, j* job);
 j* t_j_remove_Job(j* h, int jobNumber);
 j* t_j_procurar_Job(j* job, int jobNumber);
+j* t_o_inserir_operacao_no_job(j* lista_de_jobs, o* lista_de_operacoes);
 bool t_j_apaga_Jobs(j** h);
 
 #pragma endregion

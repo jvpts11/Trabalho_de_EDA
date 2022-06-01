@@ -39,7 +39,7 @@
     <ClCompile Include="Arquivos_fase_1\T_Funcoes.c">
       <Filter>Arquivos fase 1</Filter>
     </ClCompile>
-    <ClCompile Include="T_F2_Ficheiros.c">
+    <ClCompile Include="T_F2_Planeamento.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

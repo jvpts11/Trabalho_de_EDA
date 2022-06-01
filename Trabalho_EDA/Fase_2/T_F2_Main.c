@@ -61,4 +61,14 @@ void main()
 		printf("%d\n", auxx->numero);
 		auxx = auxx->next;
 	}
+
+	#pragma region Parte_do_planeamento
+
+	p planeamento[M][T];
+
+	t_F2_iniciar_planeamento(planeamento, -1, -1);
+
+
+
+	#pragma endregion
 }
