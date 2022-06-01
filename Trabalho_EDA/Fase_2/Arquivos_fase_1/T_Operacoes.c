@@ -14,8 +14,7 @@ o* t_o_cria_operacao(int id)
 	o* operacao = malloc(sizeof(o));
 	operacao->number = id;
 	operacao->head = NULL;
-	operacao->nextt;
-
+	operacao->nextt = NULL;
 	return operacao;
 }
 

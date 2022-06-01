@@ -105,11 +105,3 @@ void t_j_apaga_Jobs(j** h) {
 		free(aux);
 	}
 }
-
-j* t_j_CriaeInsere_Job(j** h, int jobID)
-{
-	j* job = NULL;
-	job = t_j_Cria_Job(jobID);
-	job = t_j_Inserir_Novo_Job(h, job);
-	return job;
-}
