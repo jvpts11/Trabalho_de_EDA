@@ -29,39 +29,47 @@ void main()
 	//j* aux = t_j_procurar_Job(hj, 2);
 	//printf("%d", aux->numero);
 
+	
 	o* ope1 = t_o_cria_operacao(1);
 	o* ope2 = t_o_cria_operacao(2);
+	/*
 	o* ope3 = t_o_cria_operacao(3);
 	o** ho_1 = ope1;
 
 	ope2 = t_o_inserir_nova_Operacao(&ho_1, ope2);
 	ope3 = t_o_inserir_nova_Operacao(&ho_1, ope3);
 	
+	*/
 
-	j* auxx;
-	auxx = hj;
+	j* aux = job3;
+	
+	o* auxx = t_o_inserir_nova_Operacao(aux->operation, ope2);
+	//aux = t_o_Inserir_Operaçao_em_Job(hj, 2, 3);
+
 	//auxx = t_o_procurar_Operacao(ho_1, 1);
 
 	//auxx = t_o_remover_operacao(ho_1, 2);
 
-	auxx = t_j_remove_Job(hj, 1);
+	//auxx = t_j_procurar_Job(hj, 2);
+	//printf("%d", auxx->numero);
 
 	/*
 	aux = hj;
-
-	while (aux != NULL)
-	{
-		printf("%d\n", aux->numero);
-		aux = aux->next;
-	}
 	*/
+	while (auxx != NULL)
+	{
+		printf("%d\n", auxx->number);
+		auxx = auxx->nextt;
+	}
+	
 
+	/*
 	while (auxx != NULL)
 	{
 		printf("%d\n", auxx->numero);
 		auxx = auxx->next;
 	}
-
+	*/
 	#pragma region Parte_do_planeamento
 
 	p planeamento[M][T];
