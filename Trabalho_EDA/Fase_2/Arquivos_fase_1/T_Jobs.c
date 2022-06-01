@@ -50,6 +50,15 @@ j* t_j_Inserir_Novo_Job(j** head, j* job)
 	return job;
 }
 
+/**
+* @brief Função que insere operação em um job
+* 
+* @param lista_de_jobs - lista de jobs que receberá a operação
+* 
+* @param lista_de_operações - lista de operações que será inserida no job
+* 
+* @return job com a operação
+*/
 j* t_o_inserir_operacao_no_job(j* lista_de_jobs, o* lista_de_operacoes) {
 
 	j* temp = NULL;
