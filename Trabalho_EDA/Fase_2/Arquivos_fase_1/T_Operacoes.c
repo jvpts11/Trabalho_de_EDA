@@ -77,6 +77,21 @@ o* t_o_remover_operacao(o* h, int id)
 	return h;
 }
 
+void t_o_inserir_maquina_na_operacao(o* operacao,int operationId, m* maquinas) {
+	o* temp = NULL;
+	o* aux = NULL;
+
+	aux = operacao;
+
+	while (aux != NULL) {
+		if (aux->number == operationId) {
+			temp = aux;
+		}
+		aux = aux->nextt;
+	}
+	temp->head = t_m_inserir_novo_bloco2(temp->head,maquinas);
+}
+
 bool t_o_apaga_operacoes(o** h) {
 	
 	bool check = false;

@@ -22,7 +22,7 @@
 *
 * @return uma máquina que pode ser ligada com outra em uma lista
 */
-m* t_m_criar_Novo_Bloco(int machineId, short tempoDeProd) {
+m* t_m_criar_Novo_Bloco(int machineId,short tempoDeProd) {
 	m* blocoNovo = malloc(sizeof(m));
 	blocoNovo->id = machineId;
 	blocoNovo->tempoDeProducao = tempoDeProd;
@@ -44,6 +44,18 @@ m* t_m_inserir_novo_Bloco(m** h, m* maquina) {
 	maquina->next = *h;
 	*h = maquina;
 	return maquina;
+}
+
+m* t_m_inserir_novo_bloco2(m*h,m*maquina) {
+	if (h == NULL || maquina == NULL) return;
+
+	if (h == NULL) {
+		h = maquina;
+	}
+	else {
+		maquina->next = h;
+		h = maquina;
+	}
 }
 
 #pragma endregion
