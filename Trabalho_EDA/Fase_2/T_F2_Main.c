@@ -20,7 +20,7 @@ void main()
 	j* HeadJob = NULL;
 
 	//Montagem da lista de jobs a partir dos dados do ficheiro
-	HeadJob = t_j_gerar_jobs_a_partir_de_ficheiros_de_texto("Jobs//Jobs.txt");
+	HeadJob = t_j_gerar_jobs_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Jobs//Jobs.txt");
 
 #pragma endregion
 
@@ -31,28 +31,28 @@ void main()
 	//Montagem das listas de operações dos jobs a partir dos dados de um ficheiro
 
 	o* HeadOper1 = NULL;
-	HeadOper1 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Operacoes//OperacoesJobUm");
+	HeadOper1 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Operacoes//OperacoesJobUm.txt");
 
 	o* HeadOper2 = NULL;
-	HeadOper2 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Operacoes//OperacoesJobDois");
+	HeadOper2 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Operacoes//OperacoesJobDois.txt");
 
 	o* HeadOper3 = NULL;
-	HeadOper3 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Operacoes//OperacoesJobTres");
+	HeadOper3 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Operacoes//OperacoesJobTres.txt");
 
 	o* HeadOper4 = NULL;
-	HeadOper4 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Operacoes//OperacoesJobQuatro");
+	HeadOper4 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Operacoes//OperacoesJobQuatro.txt");
 
 	o* HeadOper5 = NULL;
-	HeadOper5 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Operacoes//OperacoesJobCinco");
+	HeadOper5 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Operacoes//OperacoesJobCinco.txt");
 
 	o* HeadOper6 = NULL;
-	HeadOper6 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Operacoes//OperacoesJobSeis");
+	HeadOper6 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Operacoes//OperacoesJobSeis.txt");
 
 	o* HeadOper7 = NULL;
-	HeadOper7 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Operacoes//OperacoesJobSete");
+	HeadOper7 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Operacoes//OperacoesJobSete.txt");
 
 	o* HeadOper8 = NULL;
-	HeadOper8 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Operacoes//OperacoesJobOito");
+	HeadOper8 = t_o_gerar_operacoes_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Operacoes//OperacoesJobOito.txt");
 
 #pragma endregion
 
@@ -62,35 +62,35 @@ void main()
 
     //Maquinas Job 1
 
-	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Maquinas//MaquinasJobUm", HeadOper1);
+	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Maquinas//MaquinasJobUm.txt", HeadOper1);
 
 	//Maquinas Job 2
 
-	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Maquinas//MaquinasJobDois", HeadOper2);
+	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Maquinas//MaquinasJobDois.txt", HeadOper2);
 
 	//Maquinas Job 3
 
-	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Maquinas//MaquinasJobTres", HeadOper3);
+	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Maquinas//MaquinasJobTres.txt", HeadOper3);
 
 	//Maquinas Job 4
 
-	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Maquinas//MaquinasJobQuatro", HeadOper4);
+	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Maquinas//MaquinasJobQuatro.txt", HeadOper4);
 
 	//Maquinas Job 5
 
-	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Maquinas//MaquinasJobCinco", HeadOper5);
+	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Maquinas//MaquinasJobCinco.txt", HeadOper5);
 
 	//Maquinas Job 6
 
-	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Maquinas//MaquinasJobSeis", HeadOper6);
+	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Maquinas//MaquinasJobSeis.txt", HeadOper6);
 
 	//Maquinas Job 7
 
-	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Maquinas//MaquinasJobSete", HeadOper7);
+	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Maquinas//MaquinasJobSete.txt", HeadOper7);
 
 	//Maquinas Job 8
 
-	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Maquinas//MaquinasJobOito", HeadOper8);
+	t_m_gerar_maquinas_a_partir_de_ficheiros_de_texto("Arquivos_de_Texto//Maquinas//MaquinasJobOito.txt", HeadOper8);
 
 #pragma endregion
 
