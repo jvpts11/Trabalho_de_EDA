@@ -81,7 +81,6 @@ bool t_F2_ocupar_planeamento(p planeamento[][T], char nome_do_arquivo[MAXFILENAM
 		if (auxJob == auxiliar.jobId) {
 			j = jEnd;
 		}
-
 		else {
 			j = 0;
 		}

@@ -1,34 +1,3 @@
-<<<<<<< Updated upstream
-﻿  T_F2_Main.c
-C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(100,47): warning C4133: 'função': tipos incompatíveis - de 'j *' para 'm *'
-  Fase_2.vcxproj -> C:\Users\Gil\Documents\GitHub\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Fase_2.exe
-=======
-﻿  T_F2_Planeamento.c
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(68,6): warning C4101: 'unidades_de_tempo': unreferenced local variable
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(65,6): warning C4101: 'jobId': unreferenced local variable
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(67,6): warning C4101: 'machineId': unreferenced local variable
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(66,6): warning C4101: 'opId': unreferenced local variable
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(123,33): warning C4033: 't_F2_guardar_tudo_do_job' must return a value
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(130,24): warning C4133: '=': incompatible types - from 'Jobs *' to 'o *'
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(133,13): warning C4133: '=': incompatible types - from 'j *' to 'o *'
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(137,22): warning C4133: '=': incompatible types - from 'Machines *' to 'o *'
-  T_F2_Main.c
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(23,33): warning C4047: 'function': 'j **' differs in levels of indirection from 'j ***'
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(23,30): warning C4024: 't_j_Inserir_Novo_Job': different types for formal and actual parameter 1
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(24,33): warning C4047: 'function': 'j **' differs in levels of indirection from 'j ***'
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(24,30): warning C4024: 't_j_Inserir_Novo_Job': different types for formal and actual parameter 1
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(25,33): warning C4047: 'function': 'j **' differs in levels of indirection from 'j ***'
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(25,30): warning C4024: 't_j_Inserir_Novo_Job': different types for formal and actual parameter 1
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(46,52): warning C4047: 'function': 'o **' differs in levels of indirection from 'Jobs *'
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(46,41): warning C4024: 't_o_inserir_nova_Operacao': different types for formal and actual parameter 1
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Main.c(20,1): warning C4047: 'initializing': 'j **' differs in levels of indirection from 'j *'
-  T_F2_Manipulacao.c
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Manipulacao.c(37,50): warning C4033: 't_F2_g_inserir_bloco' must return a value
-  Generating Code...
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Manipulacao.c(41): warning C4715: 't_F2_g_inserir_bloco': not all control paths return a value
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(35): warning C4716: 't_F2_iniciar_planeamento': must return a value
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(110): warning C4716: 't_F2_ocupar_planeamento': must return a value
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(182): warning C4716: 't_F2_gravar_plano': must return a value
-C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\Fase_2\T_F2_Planeamento.c(141): warning C4716: 't_F2_guardar_tudo_do_job': must return a value
-  Fase_2.vcxproj -> C:\Users\JoaoMacieira\Desktop\Github\Trabalho_de_EDA\Trabalho_EDA\x64\Debug\Fase_2.exe
->>>>>>> Stashed changes
+﻿  T_Jobs.c
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Fase_2\Arquivos_fase_1\T_Jobs.c(68,37): warning C4133: '=': incompatible types - from 'o *' to 'Jobs *'
+C:\Users\Tavares\OneDrive\Documentos\GitHub\Trabalho_de_EDA\Trabalho_EDA\Fase_2\Arquivos_fase_1\T_Jobs.c(68): error C4700: uninitialized local variable 'aux' used
